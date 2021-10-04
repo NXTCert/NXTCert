@@ -1,0 +1,63 @@
+#HomeImage{
+    height: 350px;
+    margin-bottom: 20px;
+}
+.CardTitle {
+    text-align: center;
+}
+
+.CardImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+#BottomCards {
+    width: 900px;
+    height: 300px;
+}
+
+#FindCertCard {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding: 18px;
+    margin: 5px;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+
+#LearnCard {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding: 18px;
+    margin: 5px;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+
+#ProgressCard {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding: 18px;
+    margin: 5px;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+
+#CommunityCard {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding: 18px;
+    margin: 5px;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+.group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
