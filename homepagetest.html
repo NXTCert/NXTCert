@@ -8,35 +8,18 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--css file link-->
 <link rel="stylesheet" type="text/css" href="index.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">NXT Cert</a>
-        <div id="Navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Certificates</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Profile</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="nav-placeholder">
+
+    </div>
+
     <div id="HomeImage">
-        <img src="..." class="img-fluid" alt="Homepage Image">
+        <img src="/images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" class="img-fluid" alt="Homepage Image">
     </div>
     <div class="group" id="BottomCards">
     
@@ -62,5 +45,11 @@
             <p>Leave reviews and connect with others in your industry.</p>
         </div>
     </div>
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+        </script>
 </body>
 </html>
