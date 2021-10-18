@@ -8,21 +8,47 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--css file link-->
 <link rel="stylesheet" type="text/css" href="index.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
 
 </head>
 <body>
-<h1>Logo goes here</h1>
+    <div id="nav-placeholder">
 
-<h6>Buttons go here
-<br>
+    </div>
 
-<button type="button" class="btn btn-primary">Home</button>
-<button type="button" class="btn btn-primary">Certifications</button>
-<button type="button" class="btn btn-primary">Careers</button>
-<button type="button" class="btn btn-primary">About</button>
-<button type="button" class="btn btn-primary">Login</button>
+    <div id="HomeImage">
+        <img src="images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" class="img-fluid" alt="Homepage Image">
+    </div>
+    <div class="group flex-container" >
+        <div id="FindCertCard"  class="card">
+            <img src="..." alt="Cert Icon" class="CardImage img-thumbnail">
+            <p class="CardTitle">Find your Cert</p>
+            <p>Customized list of Certifications Based on education, interests, and industry.
+            </p>
+        </div>
+        <div id="LearnCard" class="card">
+            <img src="..." alt="Learn Icon" class="CardImage img-thumbnail">
+            <p class="CardTitle">Learn</p>
+            <p>Study for your certifications with our recommended resources.</p>
+        </div>
+        <div id="ProgressCard" class="card">
+            <img src="..." alt="Progress Icon" class="CardImage img-thumbnail">
+            <p class="CardTitle">Track Progress</p>
+            <p>Keep track of your progress on all your certifications.</p>
+        </div>
+        <div id="CommunityCard" class="card">
+            <img src="..." alt="Community Icon" class="CardImage img-thumbnail">
+            <p class="CardTitle">Community</p>
+            <p>Leave reviews and connect with others in your industry.</p>
+        </div>
+    </div>
 
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+        </script>
 </body>
 </html>
