@@ -2,8 +2,8 @@
   margin-top: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-    margin-left: 50%;
+
+    
 }
 .stepper-item {
   position: relative;
@@ -75,63 +75,35 @@
   content: none;
 }
 
-dl.faq button {
-  margin: 0;
-  padding: 0;
-  margin-top: 1em;
-  font-weight: bold;
-  font-size: 110%;
-  border: thin solid grey;
-  background-color: white;
-  padding-left: 0.125em;
-    height: 40px;
-    margin-left: 10%;
-    width: 80%;
-    text-align: left
+details {
+    border-radius: 14px;
+    margin-bottom: 5%;
+    m
+    height: 75px;
+    background-color: white;
+
+
 }
 
-dl dd {
-  margin: 0;
-  padding: 0;
-  margin-left: 1.5em;
-    text-align: center;
+summary {
+    font-weight: bold;
+    font-size: 25px;
+    v
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    margin-bottom: .5em;
+}
+
+.favorites {
     
 }
-
-dl.faq .desc {
-  margin: 0;
-  padding: 0.5em;
-  font-size: 110%;
-
-}
-
-dl.faq button:hover,
-dl.faq button:focus {
-  background-color: #eee;
-}
-
-dl.faq button:focus {
-  border-color: #630;
-}
-
-dl.faq button:hover {
-  text-decoration: underline;
-}
-
-dl.faq button:active {
-  background-color: #bbb;
-}
-
-dl.faq button[aria-expanded="false"]::after {
-  content: url('../images/right-arrow-brown.png');
-  padding-right: 0.35em;
-}
-
-dl.faq button[aria-expanded="true"]::after {
-  content: url('../images/down-arrow-brown.png');
-  padding-right: 0.35em;
-}
-
 
 body{
     background-color: #eeeeee;
@@ -142,7 +114,7 @@ body{
 
 .profile_pic {
     float: left;
-    height: 300px;
+    height: 200px;
 }
 
 .username {
@@ -159,4 +131,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.favorite {
+    margin-top: 5%;
+}
+
+p {
+    text-align: center;
 }
