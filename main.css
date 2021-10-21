@@ -16,12 +16,12 @@ body{
     min-height: 300px;
     min-width: 300px;
     height: auto;
-    border: 2px solid grey;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     border-radius: 16px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
 
 
@@ -45,11 +45,12 @@ body{
  
     cursor: pointer;
     border: none;
+    outline: none;
 
 }
 
 .activeTab {
-    font-size: 1.25em;
+    font-size: 1.3em;
     color: #2E87FC;
 }
 
