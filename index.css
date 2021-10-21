@@ -64,20 +64,35 @@ body{
     border-radius: 25px;
     background-color: white;
     color: rgb(102, 100, 100);
+    align-content: center;
+
 }
 
 
 .CardTitle {
     text-align: center;
-    
+    margin: 5px;
+    font-weight: 400;
+  
 }
 
 
-.CardImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+.fas {
+    font-size: 2em;
+    color: #2E87FC;
+    margin: auto;
+}
+
+#iconContainer{
+    display:block;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    line-height: 110px;
 }
 
 #startbtn,#learnbtn{
@@ -91,6 +106,13 @@ body{
     font-weight: 300;
     font-size: .75em;
 }
+
+#startbtn > a, #learnbtn > a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
 
 #startbtn{
     background-color: #2E87FC;

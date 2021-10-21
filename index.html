@@ -9,7 +9,7 @@
 <!--css file link-->
 <link rel="stylesheet" type="text/css" href="index.css">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
 </head>
@@ -25,30 +25,39 @@
         
         <div id=bannerText>
             <p>We find the certifications you need, <br> So you can get the job you want.</p>
-            <button id="startbtn"> Start Now</button>
-            <button id="learnbtn">Learn More</button>
+            <button id="startbtn"> <a href='certificates.html'>Start Now</a></button>
+            <button id="learnbtn"><a href='about.html'>Learn More</a></button>
         </div>
 
     </div>
     <div class="group flex-container" >
         <div id="FindCertCard"  class="card">
-            <img src="..." alt="Cert Icon" class="CardImage img-thumbnail">
+            <div id="iconContainer">
+                <i class="fas fa-search"></i>
+            </div>
+            
             <p class="CardTitle">Find your Cert</p>
-            <p>Customized list of Certifications Based on education, interests, and industry.
+            <p>Customized list based on your education, interests, and industry.
             </p>
         </div>
         <div id="LearnCard" class="card">
-            <img src="..." alt="Learn Icon" class="CardImage img-thumbnail">
+            <div id="iconContainer">
+                <i class="fas fa-book-open"></i>
+            </div>
             <p class="CardTitle">Learn</p>
             <p>Study for your certifications with our recommended resources.</p>
         </div>
         <div id="ProgressCard" class="card">
-            <img src="..." alt="Progress Icon" class="CardImage img-thumbnail">
+            <div id="iconContainer">
+                <i class="fas fa-tasks"></i>
+            </div>
             <p class="CardTitle">Track Progress</p>
             <p>Keep track of your progress on all your certifications.</p>
         </div>
         <div id="CommunityCard" class="card">
-            <img src="..." alt="Community Icon" class="CardImage img-thumbnail">
+            <div id="iconContainer">
+                <i class="fas fa-user-friends"></i>
+            </div>
             <p class="CardTitle">Community</p>
             <p>Leave reviews and connect with others in your industry.</p>
         </div>
