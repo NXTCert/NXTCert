@@ -10,6 +10,11 @@ body{
     font-family: Helvetica, sans-serif;
 }
 
+.navbar-right, .navbar-collapse{
+    text-align: right;
+    margin-left: auto;
+}
+
 /* banner */
 #BannerContainer{
     position: relative;
