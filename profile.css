@@ -138,3 +138,16 @@ body{
 p {
     text-align: center;
 }
+
+body{
+    background-color: #e7e4e4;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+}
+.navbar{
+    font-family: Helvetica, sans-serif;
+}
+.navbar-right, .navbar-collapse{
+    text-align: right;
+    margin-left: auto;
+}
