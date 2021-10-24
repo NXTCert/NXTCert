@@ -10,6 +10,8 @@ body{
     font-family: Helvetica, sans-serif;
 }
 
+
+
 .navbar-right, .navbar-collapse{
     text-align: right;
     margin-left: auto;
@@ -112,6 +114,11 @@ body{
     font-weight: 300;
     font-size: .75em;
 }
+
+#startbtn:hover,#learnbtn:hover{
+    font-size: .8em;
+}
+
 
 #startbtn > a, #learnbtn > a{
     color: white;
