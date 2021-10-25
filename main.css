@@ -11,6 +11,10 @@ body{
     margin-left: auto;
 }
 
+.logoImg{
+    width: 200px;
+}
+
 /* login page */
 .formsContainer{
     margin: 100px auto;
