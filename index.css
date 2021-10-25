@@ -10,6 +10,9 @@ body{
     font-family: Helvetica, sans-serif;
 }
 
+.logoImg{
+    width: 200px;
+}
 
 
 .navbar-right, .navbar-collapse{
@@ -31,7 +34,6 @@ body{
     height: 100%;
 }
 
-
 #bannerText{
     position: absolute;
     top: 100px;
@@ -42,6 +44,7 @@ body{
     font-size: 1.25em;
     color: white;
 }
+
 #overlay{
     position: absolute; 
     top: 0;
