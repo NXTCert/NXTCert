@@ -1,0 +1,55 @@
+#certTitle{
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    min-width: 500px;
+    margin: 30px 100px 15px;
+}
+#categoryTitle{
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    min-width: 500px;
+    margin: 30px 100px 15px;
+
+}
+.certs{
+    position: relative;
+    margin: 0 100px;
+    width: 800px;
+    height: 125px;
+    background-color: white;
+    border: solid 1px darkgray;
+    border-radius: 25px;
+    padding: 10px;
+}
+.title{
+    font-weight: 600;
+    margin: 0px 0px 10px 20px;
+}
+.source{
+    margin: 0 0 -2px 20px;
+}
+.description{
+    margin: 0px 20px;
+}
+.shareIcon{
+    float:right;
+
+    position: absolute;
+    top: 15px;
+    right: 65px;
+}
+.heartIcon{
+    float: right;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+}
+.barsIcon{
+    color: #2E87FC;
+}
+.barsIcon:hover{
+    color: #79D1F0;
+    position: relative;
+    top: 1px;
+    right: -1px;
+}

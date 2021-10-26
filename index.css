@@ -79,6 +79,11 @@ body{
 
 }
 
+#iconContainer:hover{
+    position: relative;
+    top: -5px;
+    box-shadow: 5px 5px 5px darkgray;
+}
 
 .CardTitle {
     text-align: center;
@@ -103,7 +108,7 @@ body{
     margin: auto;
     align-content: center;
     text-align: center;
-    line-height: 110px;
+    line-height: 100px;
 }
 
 #startbtn,#learnbtn{
@@ -118,11 +123,14 @@ body{
     font-size: .75em;
 }
 
-#startbtn:hover,#learnbtn:hover{
+
+#startbtn:hover, #learnbtn:hover{
+    position: relative;
+    bottom: -1px;
+    right: -2px;
+    box-shadow: 5px 5px 10px darkslategray;
     font-size: .8em;
 }
-
-
 #startbtn > a, #learnbtn > a{
     color: white;
     text-decoration: none;
