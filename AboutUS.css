@@ -1,18 +1,19 @@
 .fadeInLogo {
   animation: fadeInLogo ease 12s;
-  -webkit-animation: fadeInLogo ease 8s;
+  -webkit-animation: fadeInLogo ease 12s;
   -moz-animation: fadeInLogo ease 12s;
   -o-animation: fadeInLogo ease 12s;
   -ms-animation: fadeInLogo ease 12s;
 
-	width: 50%;
 }
+
+
 .floatContainer {
-    padding-bottom: 250px;
-	display: flex;
-  justify-content: center;
-	max-height: 500px;
-			border: solid red 2px;
+   padding-bottom: 250px;
+   display: flex;
+   justify-content: center;
+   max-height: 500px;
+   border: solid red 2px;
 
 
 }
@@ -21,25 +22,34 @@
 .floatChild {
     width: auto;
  /*   float: left; */
-    padding: 10px;
-	height: 10px;
 	border: solid red 2px;
 	/*display: flex; when i put this on the text covers the logo */
-	justify-content: center;
+	justify-content: left;
+	display: flex;
 
 
 }  
-
-.floatChild2 {
-    width: 50%;
-    padding: 2px;
-	padding-top: 180px;
+.logoPullrightChild {
+  
+	padding-top: 150px;
 	font-family: Helvetica, sans-serif;
     font-weight: 400;
 	padding-bottom: 60px;
 	border: solid red 2px;
 	/* display: flex; when i use this the text goes away */
-
+justify-content: right;
+	width: 50%;
+} 
+.logoChild {
+  
+	padding-top: 150px;
+	font-family: Helvetica, sans-serif;
+    font-weight: 400;
+	padding-bottom: 60px;
+	border: solid red 2px;
+	/* display: flex; when i use this the text goes away */
+justify-content: right;
+	width: 50%;
 } 
 
 .floatChildCareer {
@@ -69,9 +79,9 @@
   margin: auto;
   text-align: center;
   font-family: Helvetica, sans-serif;
-	float: left;
-	border: 16px solid white;
-	  border-radius: 25px;
+  float: left;
+  border: 16px solid white;
+  border-radius: 25px;
 
  
 }
