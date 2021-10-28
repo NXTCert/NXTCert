@@ -9,18 +9,39 @@
 }
 .floatContainer {
     padding-bottom: 250px;
+	display: flex;
   justify-content: center;
 	max-height: 500px;
-	display: flex;
+			border: solid red 2px;
+
 
 }
 
 
 .floatChild {
     width: auto;
-    float: left;
+ /*   float: left; */
     padding: 10px;
+	height: 10px;
+	border: solid red 2px;
+	/*display: flex; when i put this on the text covers the logo */
+	justify-content: center;
+
+
 }  
+
+.floatChild2 {
+    width: 50%;
+    padding: 2px;
+	padding-top: 180px;
+	font-family: Helvetica, sans-serif;
+    font-weight: 400;
+	padding-bottom: 60px;
+	border: solid red 2px;
+	/* display: flex; when i use this the text goes away */
+
+} 
+
 .floatChildCareer {
     max-width:1100px;
     float: left;
@@ -28,19 +49,10 @@
 	width: 700px;
 	height: auto;
 	
-
 }  
 
-.floatChild2 {
-    width: 50%;
-    float: left;
-    padding: 2px;
-	padding-top: 180px;
-	font-family: Helvetica, sans-serif;
-    font-weight: 400;
-	padding-bottom: 60px
-}  
-
+ 
+/* centering our cards for each person */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -142,6 +154,18 @@ text-align: center;
   }
 }
 
-	<!--Resources
+/* TICKETS and PROBLEMS 
+	
+	- when you zoom out on the cards they are fine but when you zoom in they are different heights 
+	-Kun's card is too short by just a hari 
+	
+	
+	
+	*/
+	
+	
+
+	
+/*Resources
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_profile_card
-	-->
+	*/
