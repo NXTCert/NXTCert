@@ -1,3 +1,4 @@
+/*This is the CSS for the about page Chelsey did -CB -*/
 .fadeInLogo {
   animation: fadeInLogo ease 12s;
   -webkit-animation: fadeInLogo ease 12s;
@@ -17,6 +18,27 @@
 
 
 }
+.AboutUSContainer {
+   padding-bottom: 250px;
+   display: flex;
+
+	margin-left: auto;
+    margin-right: auto;
+   max-height: 500px;
+   border: solid red 2px;
+   width: auto;
+}
+	
+/*
+	justify-content — controls alignment of all items on the main axis.
+align-items — controls alignment of all items on the cross axis.
+align-self — controls alignment of an individual flex item on the cross axis.
+align-content — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+gap, column-gap, and row-gap — used to create gaps or gutters between flex items.
+	
+	*/
+
+
 
 
 .floatChild {
@@ -166,8 +188,8 @@ text-align: center;
 
 /* TICKETS and PROBLEMS 
 	
-	- when you zoom out on the cards they are fine but when you zoom in they are different heights 
-	-Kun's card is too short by just a hari 
+	- when you zoom out on the cards they are fine but when you zoom in they are different heights -CB
+	-Kun's card is too short by just a hair -CB 
 	
 	
 	
@@ -178,4 +200,6 @@ text-align: center;
 	
 /*Resources
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_profile_card
+	
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 	*/
