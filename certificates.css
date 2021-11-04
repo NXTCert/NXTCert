@@ -45,10 +45,10 @@
     right: 40px;
 }
 .barsIcon{
-    color: #2E87FC;
+    color: #31B7F4;
 }
 .barsIcon:hover{
-    color: #79D1F0;
+    color: #31B7F4;
     position: relative;
     top: 1px;
     right: -1px;

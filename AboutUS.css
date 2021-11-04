@@ -1,26 +1,78 @@
+/*This is the CSS for the about page Chelsey did -CB -*/
 .fadeInLogo {
   animation: fadeInLogo ease 12s;
-  -webkit-animation: fadeInLogo ease 8s;
+  -webkit-animation: fadeInLogo ease 12s;
   -moz-animation: fadeInLogo ease 12s;
   -o-animation: fadeInLogo ease 12s;
   -ms-animation: fadeInLogo ease 12s;
 
-	width: 50%;
 }
+
+
 .floatContainer {
-    padding-bottom: 250px;
-  justify-content: center;
-	max-height: 500px;
-	display: flex;
+   padding-bottom: 250px;
+   display: flex;
+   justify-content: center;
+   max-height: 500px;
+ 
+
 
 }
+.AboutUSContainer {
+   padding-bottom: 250px;
+   display: flex;
+   justify-content: center; 
+	margin-left: auto;
+    margin-right: auto;
+   max-height: 500px;
+   width: auto;
+}
+	
+/*
+	justify-content — controls alignment of all items on the main axis.
+align-items — controls alignment of all items on the cross axis.
+align-self — controls alignment of an individual flex item on the cross axis.
+align-content — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+gap, column-gap, and row-gap — used to create gaps or gutters between flex items.
+	
+	*/
 
 
 .floatChild {
     width: auto;
-    float: left;
-    padding: 10px;
+ /*   float: left; */
+	
+	/*display: flex; when i put this on the text covers the logo */
+	justify-content: left;
+	display: flex;
+	padding: 15px;
+
+
 }  
+.logoPullrightChild {
+  
+	padding-top: 150px;
+	font-family: Helvetica, sans-serif;
+    font-weight: 400;
+	padding-bottom: 60px;
+	/* display: flex; when i use this the text goes away */
+justify-content: right;
+	width: 50%;
+} 
+.logoChild {
+  
+	padding-top: 190px;
+	font-family: Helvetica, sans-serif;
+    font-weight: 400;
+	padding-bottom: 60px;
+	
+	/* display: flex; when i use this the text goes away */
+	justify-content: right;
+	width: 50%;
+
+	justify-content: center;
+} 
+
 .floatChildCareer {
     max-width:1100px;
     float: left;
@@ -28,19 +80,10 @@
 	width: 700px;
 	height: auto;
 	
-
 }  
 
-.floatChild2 {
-    width: 50%;
-    float: left;
-    padding: 2px;
-	padding-top: 180px;
-	font-family: Helvetica, sans-serif;
-    font-weight: 400;
-	padding-bottom: 60px
-}  
-
+ 
+/* centering our cards for each person */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -57,9 +100,9 @@
   margin: auto;
   text-align: center;
   font-family: Helvetica, sans-serif;
-	float: left;
-	border: 16px solid white;
-	  border-radius: 25px;
+  float: left;
+  border: 16px solid white;
+  border-radius: 25px;
 
  
 }
@@ -142,6 +185,20 @@ text-align: center;
   }
 }
 
-	<!--Resources
+/* TICKETS and PROBLEMS 
+	
+	- when you zoom out on the cards they are fine but when you zoom in they are different heights -CB
+	-Kun's card is too short by just a hair -CB 
+	
+	
+	
+	*/
+	
+	
+
+	
+/*Resources
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_profile_card
-	-->
+	
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+	*/

@@ -95,7 +95,7 @@ body{
 
 .fas {
     font-size: 2em;
-    color: #2E87FC;
+    color: #31B7F4;
     margin: auto;
 }
 
@@ -113,7 +113,7 @@ body{
 
 #startbtn,#learnbtn{
     color:white;
-    border: 1px solid#2E87FC;
+    border: 1px solid#31B7F4;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
@@ -139,12 +139,25 @@ body{
 
 
 #startbtn{
-    background-color: #2E87FC;
+    background-color: #31B7F4
 }
 
 #learnbtn{
     background-color: transparent;
 }
+
+/*TICKETS and ISSUES
+ - the logo needs to take you back to the home page 
+ - when your on a page it is not highligted
+
+*/
+
+
+
+
+
+
+
 
 /* #BottomCards {
     width: 900px;
