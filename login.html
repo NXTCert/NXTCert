@@ -12,6 +12,22 @@
  
      <link rel="stylesheet" href="main.css">
 
+
+     <script>
+        // $(document).ready(function(){
+        //   $("#confirmpwd").keyup(function(){
+        //     if ($('#regpwd').val() == $('#confirmpwd').val()) {
+		//         $('#confirmpwd').css('background-color', 'green');
+		//     } else 
+		//         $('#confirmpwd').css('background-color', 'red');
+        //   });
+        //   $("#confirmpwd").keydown(function(){
+
+        //     $("#confirmpwd").css("background-color", "white");
+        //   });
+        // });
+    </script>
+
  </head>
  <body>
      <!-- keep at top -->
@@ -56,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" placeholder="Password" id="regpwd">
+                        <input type="password" class="form-control" placeholder="Password" id="regpwd" required>
                     </div>
                     <div class="form-group">
                         <label for="confirmpwd">Confirm Password:</label>
@@ -99,6 +115,19 @@
                 registerBtn.classList.add('activeTab');
     
             }
+
+            $(document).ready(function(){
+                $("#confirmpwd").keyup(function(){
+                    if ($('#regpwd').val() == $('#confirmpwd').val() & $('#confirmpwd').val() != '') {
+		                $('#confirmpwd').css('border-color', 'green');
+		            } else 
+		                $('#confirmpwd').css('border-color', 'red');
+                    });
+                $("#confirmpwd").keydown(function(){
+
+                    $("#confirmpwd").css("background-color", "white");
+                });
+            });
         </script>
 
 
