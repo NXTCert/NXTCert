@@ -53,7 +53,7 @@ body{
 
 .activeTab {
     font-size: 1.3em;
-    color: #2E87FC;
+    color: #31B7F4;
 }
 
 
@@ -107,13 +107,25 @@ body{
     right: 40px;
 }
 .barsIcon{
-    color: #2E87FC;
+    color: #79D1F0;
 }
 .barsIcon:hover{
     color: #79D1F0;
     position: relative;
     top: 1px;
     right: -1px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #79D1F0;
+    border-color: #79D1F0;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #79D1F0;
+    border-color: #79D1F0;
 }
 
 /*  bubbles  of Career Page */
