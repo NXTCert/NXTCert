@@ -123,6 +123,20 @@ body{
     font-size: .75em;
 }
 
+#CareerLearnButoon{
+    color: white;
+    border: 1px solid #31B7F4;
+	background-color: transparent;
+	width: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: .75em;
+	color: red;
+}
 
 #startbtn:hover, #learnbtn:hover{
     position: relative;
@@ -146,6 +160,9 @@ body{
     background-color: transparent;
 }
 
+.nav .current {
+	background-color: white;
+}
 /*TICKETS and ISSUES
  - the logo needs to take you back to the home page 
  - when your on a page it is not highligted
