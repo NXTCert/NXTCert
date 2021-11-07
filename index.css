@@ -153,16 +153,14 @@ body{
 
 
 #startbtn{
-    background-color: #31B7F4
+    background-color: #31B7F4;
 }
 
 #learnbtn{
     background-color: transparent;
 }
 
-.nav .current {
-	background-color: white;
-}
+
 /*TICKETS and ISSUES
  - the logo needs to take you back to the home page 
  - when your on a page it is not highligted
