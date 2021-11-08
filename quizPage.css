@@ -1,7 +1,7 @@
 .quizContainer{
     margin: 100px auto;
     width: 55%;
-	height: 250px;
+	height: auto; /*250px for just the first question */
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -57,7 +57,7 @@ form button{
 
 .step-row{
 	width: 360px;
-	height: 40px;
+	height: 40px; 
 	padding-top: 10px;
 	margin: 0 auto;
 	display: flex;
