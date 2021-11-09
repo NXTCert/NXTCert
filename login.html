@@ -13,21 +13,6 @@
      <link rel="stylesheet" href="main.css">
 
 
-     <script>
-        // $(document).ready(function(){
-        //   $("#confirmpwd").keyup(function(){
-        //     if ($('#regpwd').val() == $('#confirmpwd').val()) {
-		//         $('#confirmpwd').css('background-color', 'green');
-		//     } else 
-		//         $('#confirmpwd').css('background-color', 'red');
-        //   });
-        //   $("#confirmpwd").keydown(function(){
-
-        //     $("#confirmpwd").css("background-color", "white");
-        //   });
-        // });
-    </script>
-
  </head>
  <body>
      <!-- keep at top -->
@@ -47,14 +32,14 @@
             </div>
             <hr>
             <div id="loginFormContainer">
-                <form action="">
+                <form action="login.php" method="post">
                     <div class="form-group">
                     <label for="email" >Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" id="email" required>
                     </div>
                     <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" placeholder="Enter password" id="pwd"required>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd"required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
