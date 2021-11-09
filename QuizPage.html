@@ -249,7 +249,7 @@
 		
 	var holdQuestions = {0:["Question 1: Describe your education / experience level",6,[]], 1:["Question 2: What type of certifications are you interested in?",13,[]], 2:["Question 3: What fields / roles are you interested in",11,[]],3:["Question 4: How much can you afford to spend on the certification",3,[]]}
 	
-	var holdAllAnswers = ["START OF Q1Current college student",
+	var holdAllAnswers = [" START OF Q1Current college student",
 						  "Self taught with no industry experience",
 						  "Self taught with industry experience", 
 						  "Recent college graduate with no experience",
@@ -311,23 +311,18 @@
 			   Form2.appendChild(lbl1);
 			   
 				Form2.appendChild(document.createElement("br"))
-						}
-			
-			
+						}			
 			answerCount += holdQuestions[index][1]
-
 			index++
-			
-			
 			
 		}
 			
-			if(index == Object.keys(holdQuestions).length){
-				goToNext1.innerHTML = "Submit"
+		//	if(index == Object.keys(holdQuestions).length){
+			//	goToNext1.innerHTML = "Submit"
 				
-			}else{
-				goToNext1.innerHTML = "Next"
-			}
+			//}else{
+			//	goToNext1.innerHTML = "Next"
+			//}
 	
 	//	for(var i = 0; i<holdQuestions[index][1];i++){
 		//	if ($('input[id=irrSelectNo'+(i+1)+']:checked').length > 0) {
@@ -335,15 +330,12 @@
 		//	}else{
 				
 		//		}
-		//}
+		}
 			
 			
 				
-}
-		
 
-
-		
+			
 	goBack1.onclick = function(){
 			if(index > 0){
 			Form1.innerHTML = ''
@@ -374,12 +366,12 @@
 		
 				
 		}
-		if(index == Object.keys(holdQuestions).length){
-				goToNext1.innerHTML = "Submit"
+		//if(index == Object.keys(holdQuestions).length){
+		//		goToNext1.innerHTML = "Submit"
 				
-			}else{
-				goToNext1.innerHTML = "Next"
-			}
+		//	}else{
+		//		goToNext1.innerHTML = "Next"
+		//	}
 				
 		}
     </script>
