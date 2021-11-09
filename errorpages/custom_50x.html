@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- created by Felicia Leaton for IT4830 Challenge 2 -->
+<!-- HTML for custom error page custom_50x.html-->
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Server Error</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <style>
+        h1 {
+            color: #31B7F4;
+            font-weight: 300;
+        }
+        p {
+            font-weight: 400;
+        }
+
+        h1,p {
+            font-family: Helvetica, sans-serif;
+            margin: 30px;
+        }
+        body {
+            background-color: #eeeeee;
+            margin: 0px;
+        }
+
+        h2{
+            background-color: #1D232C;
+            color: #31B7F4;
+            margin: 0;
+            padding: 50px 50px;
+        }
+    </style>
+ </head>
+ <body>
+    <div id="nav-placeholder">
+
+    </div>
+    
+  
+    <h1>Oops!</h1>
+    <p>Sorry, something went wrong. We seem to be having technical difficulties, please hang tight.</p>
+
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("/navbar.html");
+        });
+        </script>
+ </body>
+</html>
