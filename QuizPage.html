@@ -38,17 +38,24 @@
 	 <div class="quizContainer">
 		 
 		 
-	 	<form id="form1"><h3>This quiz will ask you a series of questions that will help us determine what certifications are best for you.</h3>
+	 	<form id="form1">
+	<h3>This quiz will ask you a series of questions that will help us determine what certifications are best for you.</h3>
 		
 		 
-		 
+		 <div class="button-box">
+			
+	
+			</div>
 		 
 		 </form>	
 		
 		 <form id="form2">
 			 <h3 id="form2ID"></h3>
-			 <input type="radio"  id="q1"name="b1" value="30">
+			 <!-- Question 1 : education --> 
+			 
 			 <!--can we use the values to add the points and link to the database? -Chelsey (just a thought) -->
+			 <!--
+			<input type="radio"  id="q1"name="b1" value="30">
 				  <label for="qnum1" id="qnum1"></label><br>
 			 
 				  <input type="radio" id="q2" name="b2" value="5">
@@ -63,62 +70,68 @@
 			 	<input type="radio" id="q5" name="b5" value="5">
 			 		<label for="qnum5" id="qnum5"></label><br>
 
-		<div class="button-box">
-			
-			
-				<button type="button" id="goBack1" >Back</button>
-
-				<button type="button" id="goToNext2">Next</button>	
-			</div>
-		 </form>	
-<!--
-		 <form id="form3"><h3>Question 2: Which type of certifications interest you? </h3>
-		
-			 -->
-			 <!--ALL buttons are in alphabetical order so don't move them around -Chelsey -->
 			 
-			 <!--
+			 	<input type="radio" id="q5" name="b5" value="5">
+			 		<label for="qnum5" id="qnum5"></label><br>
+-->
+		
+		 </form>
+		 <div class="button-box">
+			
+			
+				<button type="button" id="goBack1">Back</button>
+
+				<button type="button" id="goToNext1">Next</button>	
+			 
+			</div>
+
+		 <form id="form3">
+			 <h3 id="form3ID"> </h3>
+	
+
+		<!-- Question 2: Which type of certifications interest you?--> 
+			 
+<!--
 			 <input type="radio" id="q1" name="b2" value="5">
-			 <label for="qnum1">Cloud</label><br>
+			 <label for="qnum1"></label><br>
 			 
 				<input type="radio" id="q1" name="b2" value="5">
-										 <label for="qnum1">Cyber Security</label><br>  
+										 <label for="qnum1"></label><br>  
 
 				<input type="radio" id="q1" name="b3" value="5">
-										<label for="qnum1">Data Administation</label><br>
+										<label for="qnum1"></label><br>
 
 				<input type="radio" id="q1" name="b4" value="5">
-										<label for="qnum1">Data Engineering</label><br>
+										<label for="qnum1"></label><br>
 
 				<input type="radio" id="q1" name="b5" value="5">
-									<label for="qnum1">Data Science</label><br>
+									<label for="qnum1"></label><br>
 
 				 <input type="radio" id="q1" name="b6" value="5">
-						<label for="qnum1">Data Science</label><br>
+						<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b7" value="5">
-			 		<label for="qnum1">Data Solutions</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b8" value="5">
-			 		<label for="qnum1">Database</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b9" value="5">
-			 		<label for="qnum1">Development</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b10" value="5">
-			 		<label for="qnum1">DevOps</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b11" value="5">
-			 		<label for="qnum1">Networking</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q1" name="b12" value="5">
-			 		<label for="qnum1">Programming</label><br>
+			 		<label for="qnum1"></label><br>
 			 
-			  <input type="radio" id="q1" name="b13" value="5">
-			 		<label for="qnum1">Project Management</label><br>
+	
+			 	<input type="radio" id="q5" name="b5" value="5">
+			 		<label for="qnum5" id="qnum5"></label><br>
 			 
-			  <input type="radio" id="q1" name="b14" value="5">
-			 		<label for="qnum1">Tech Support</label><br>
 			 
 			 
 			 
@@ -127,82 +140,87 @@
 			<div class="button-box">
 				<button type="button" id="goBack2">Back</button>
 
-				<button type="button">Next</button>
+				<button type="button" id="goToNext2">Next</button>
 			</div>
 		 </form>	
 		 
-		 <form id="form4"><h3>Question 3: What fields / roles are you interested in? </h3>
-		
+		 <form id="form4">
+			 <h3 id="form4ID"></h3>
+			 <!-- Question 3: What fields / roles are you interested in?  --> 
+	
+			 <!--
 		 <input type="radio" id="q2" name="b2" value="5">
-			 <label for="qnum1">Computer Network Architect</label><br>
+			 <label for="qnum1"></label><br>
 			 
 				<input type="radio" id="q2" name="b2" value="5">
-										 <label for="qnum1">Computer Programmer</label><br>  
+										 <label for="qnum1"></label><br>  
 
 				<input type="radio" id="q2" name="b3" value="5">
-										<label for="qnum1">Computer Systems Administrator</label><br>
+										<label for="qnum1"></label><br>
 
 				<input type="radio" id="q3" name="b4" value="5">
-										<label for="qnum1">Computer Systems Analyst</label><br>
+										<label for="qnum1"></label><br>
 
 				<input type="radio" id="q2" name="b5" value="5">
-									<label for="qnum1">Database Administrator</label><br>
+									<label for="qnum1"></label><br>
 
 				 <input type="radio" id="q2" name="b6" value="5">
-						<label for="qnum1">Information Security Analyst</label><br>
+						<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q2" name="b7" value="5">
-			 		<label for="qnum1">IT Manager</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			 <input type="radio" id="q2" name="b7" value="5">
-			 		<label for="qnum1">Product Manager</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q2" name="b8" value="5">
-			 		<label for="qnum1">Database</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q2" name="b9" value="5">
-			 		<label for="qnum1">Software Engineer</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q2" name="b10" value="5">
-			 		<label for="qnum1">Tech Support / Support Specalist</label><br>
+			 		<label for="qnum1"></label><br>
 			 
-			  <input type="radio" id="q2" name="b11" value="5">
-			 		<label for="qnum1">Web Developer</label><br>
+		
 			 
 			  
 			<div class="button-box">
-				<button type="button">Back</button>
+				<button type="button" id="goBack3">Back</button>
 
-				<button type="button">Next</button>	
+				<button type="button" id="goToNext3">Next</button>	
 			</div>
  
 		 </form>
-		  <form id="form5"><h3>Question 4: How much are you willing to spend on the certfication</h3>
+		  <form id="form5">
+			  <h3 id="form5ID"></h3>
 		
-			  
-			  
+		
+			
+			  <!--Question 4: How much are you willing to spend on the certfication -->
+			 <!--
 			   <input type="radio" id="q3" name="b1" value="5">
-			 		<label for="qnum1">$0 - 250</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q3" name="b2" value="5">
-			 		<label for="qnum1">$260 - 500</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 			  <input type="radio" id="q3" name="b3" value="5">
-			 		<label for="qnum1">$500+</label><br>
+			 		<label for="qnum1"></label><br>
 			 
 		 
 			<div class="button-box">
-				<button type="button">Back</button>
+				<button type="button" id="goBack4">Back</button>
 
-				<button type="button">Submit</button>
+				<button type="button" id="submitQuiz">Submit</button>
 			</div>
-		 
+		 -->
 		 
 		 
 		 </form>
 			
-		-->
-			
+
+		
 	 
 	 
 	 
@@ -228,48 +246,142 @@
 		var back1 = document.getElementById("goBack1");
 	//	var back2 = document.getElementById("goBack2");
 		
-	var holdQuestions = {0:["Question 1", 3],1: ["Question 2: Describe your education / experience level", 5], 2:["Question 3: Test" ,10]}
+		
+	var holdQuestions = {0:["Question 1: Describe your education / experience level",6,[]], 1:["Question 2: What type of certifications are you interested in?",13,[]], 2:["Question 3: What fields / roles are you interested in",11,[]],3:["Question 4: How much can you afford to spend on the certification",3,[]]}
 	
-	var holdAllAnswers = ["one","two", "three","hello", "five","one","two", "three","four", "five","hello","two", "three","four", "fifteen","two", "three","four", "fifteen"]
+	var holdAllAnswers = ["START OF Q1Current college student",
+						  "Self taught with no industry experience",
+						  "Self taught with industry experience", 
+						  "Recent college graduate with no experience",
+						  "Recent College graduate with 2+ years of experience",
+			"LAST Q1 Question!!!!!Professional with 5 - 10+ years of experience",
+						  "Start of Q2!!AI Engineering",
+						  "Business",
+						  "Cloud",
+						  "Cyber Security",
+						  "Data Administation",
+						  "Data Engineering",
+						  "Data Science",
+						  "Data Solutions",
+						  "Database",
+						  "Development",
+						  "DevOps",
+						  "Project Management",
+						  "END OF Q2!!!!Tech Support", 
+						  "START OF Q3!!! Computer Network Architecture",
+						  "Computer Programmer", 
+						  "Computer Systems Amalyst",
+						  "Data Scientist", 
+						  "Database Andministator",
+						  "Information Security Analyst",
+						  "IT Manager",
+						  "Product Manager", 
+						  "Software Engineer",
+						  "Tech Support / Support Specalist",
+						  "END OF Q3!!!!!Web Developer", 
+						  "Q4 START!!! $0-300", 
+						  "300-500",
+						  "END OF Q4!!!500+"]
+
+						
 	var h3tag = document.getElementById("form2ID")
 	
 	var index = 0
 	var answerCount = 0
 		
-		goToNext2.onclick = function(){
-		//	if(index < holdQuestions.length){
+		goToNext1.onclick = function(){
+			if(index < Object.keys(holdQuestions).length){
+			Form1.innerHTML = ''
+			Form2.innerHTML = ''
+		
+			var h3tag = document.createElement("h3")
+			
+			Form2.appendChild(h3tag)
 			h3tag.innerHTML = holdQuestions[index][0]
 			for(var i = 0; i<holdQuestions[index][1];i++){
-				var answerChoice = document.getElementById("qnum"+(i+1))
-				answerChoice.innerHTML = holdAllAnswers[answerCount+i]
-				}
+			   var selecttag1=document.createElement("input");
+			   selecttag1.setAttribute("type", "radio");
+			   selecttag1.setAttribute("name", "irrSelectNo"+i);
+			   selecttag1.setAttribute("value", "N");
+			
+			   selecttag1.setAttribute("id","irrSelectNo"+i);
+			   var lbl1 = document.createElement("label");
+			   lbl1.innerHTML = holdAllAnswers[answerCount+i];
+			Form2.appendChild(selecttag1)
+			   Form2.appendChild(lbl1);
+			   
+				Form2.appendChild(document.createElement("br"))
+						}
+			
+			
 			answerCount += holdQuestions[index][1]
 
 			index++
 			
-		//}
+			
+			
 		}
-		
-			goBack1.onclick = function(){
 			
-				index--
-					answerCount -= holdQuestions[index][1]
-				//if (index > 0){
-					h3tag.innerHTML = holdQuestions[index][0]
-					for(var i = 0; i<holdQuestions[index][1];i++){
-				var answerChoice = document.getElementById("qnum"+(i+1))
-				answerChoice.innerHTML = holdAllAnswers[answerCount+i]
-				}
-			
-
+			if(index == Object.keys(holdQuestions).length){
+				goToNext1.innerHTML = "Submit"
 				
-			//			}
-				}	
+			}else{
+				goToNext1.innerHTML = "Next"
+			}
+	
+	//	for(var i = 0; i<holdQuestions[index][1];i++){
+		//	if ($('input[id=irrSelectNo'+(i+1)+']:checked').length > 0) {
+		//		holdQuestions[index][2].append(i+1)
+		//	}else{
+				
+		//		}
+		//}
 			
-		
+			
+				
+}
 		
 
+
 		
+	goBack1.onclick = function(){
+			if(index > 0){
+			Form1.innerHTML = ''
+			Form2.innerHTML = ''
+			
+
+			index--
+			answerCount -= holdQuestions[index][1]
+			
+			var h3tag = document.createElement("h3")
+			
+			Form2.appendChild(h3tag)
+			h3tag.innerHTML = holdQuestions[index][0]
+			for(var i = 0; i<holdQuestions[index][1];i++){
+				var selecttag1=document.createElement("input");
+
+			   selecttag1.setAttribute("type", "radio");
+			   selecttag1.setAttribute("name", "irrSelectNo"+i);
+			   selecttag1.setAttribute("value", "N");
+			   selecttag1.setAttribute("id","irrSelectNo"+i);
+			   var lbl1 = document.createElement("label");
+			   lbl1.innerHTML = holdAllAnswers[answerCount+i];
+				Form2.appendChild(selecttag1)
+			   Form2.appendChild(lbl1);
+			   
+				Form2.appendChild(document.createElement("br"))
+						}
+		
+				
+		}
+		if(index == Object.keys(holdQuestions).length){
+				goToNext1.innerHTML = "Submit"
+				
+			}else{
+				goToNext1.innerHTML = "Next"
+			}
+				
+		}
     </script>
 
  </body>
