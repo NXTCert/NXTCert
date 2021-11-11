@@ -30,7 +30,15 @@
 			<div class="step-col"><small>Step 2</small></div>
 			<div class="step-col"><small>Step 3</small></div>
 	 
-		 	</div>	 
+        </div>
+     <div id="username">
+         <form action="login.php" method="post">
+             <label for="email">Email:</label><br>
+             <input type="text" id="email" name="email" value=""><br>
+             <input type="submit" value="Submit">
+         </form>
+     </div>
+     
 <!-- start of container for the quiz --> 
 	 <div class="quizContainer">
 		 
@@ -211,6 +219,16 @@
 		 -->	 
 		 </form>
 	 </div>
+     
+     <!-- results page and buttons -->
+     <div>
+         <div id="results">
+             <form>
+                <input class="resultsButton" type="submit" value="Add Results to Profile">
+                <input class="resultsButton" type="submit" value="Download Results">
+             </form>
+         </div>
+     </div>
 
     <!-- keep at bottom -Felicia -->
     <script>
