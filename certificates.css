@@ -18,12 +18,21 @@
     height: 125px;
     background-color: white;
     border: solid 1px darkgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
     border-radius: 25px;
     padding: 10px;
+	font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    min-width: 500px;
+    margin: 30px 100px 15px;
+	
 }
 .title{
     font-weight: 600;
     margin: 0px 0px 10px 20px;
+	 
+
 }
 .source{
     margin: 0 0 -2px 20px;
@@ -52,4 +61,38 @@
     position: relative;
     top: 1px;
     right: -1px;
+}
+
+.browseCertsBox{
+
+  margin-left: auto;
+  margin-right: auto;
+	font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    min-width: 500px;
+	  border-collapse: collapse;
+
+
+}
+td, th {
+  border: 1px solid transparent;
+  text-align: left;
+  padding: 8px;
+	color: #31B7F4;
+}
+
+tr:nth-child(even) {
+  background-color: slate;
+	font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    min-width: 500px;
+}
+#top2, #top1, #top3, #top4, #top5, #top6, #top7, #top8, #top9, #top10, #top11, #top12, #top13, #top14, #top15{
+    color: #31B7F4;
+	font-family: Helvetica, sans-serif;
+    font-weight: 600;
+}
+.goBackToMenu{
+position: relative;
+    margin: 0 100px;
 }
