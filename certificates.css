@@ -11,11 +11,24 @@
     margin: 30px 100px 15px;
 
 }
+#searchTitle{
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    min-width: 500px;
+	padding-right: 120px; 
+	text-align: center;
+	font-size: 20px;
+
+
+}
+#test{
+	text-align: center;
+}
 .certs{
     position: relative;
     margin: 0 100px;
     width: 800px;
-    height: 125px;
+    height: auto;
     background-color: white;
     border: solid 1px darkgray;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -36,6 +49,7 @@
 }
 .source{
     margin: 0 0 -2px 20px;
+	
 }
 .description{
     margin: 0px 20px;
@@ -65,12 +79,13 @@
 
 .browseCertsBox{
 
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto; 
+ margin-right: auto; 
+
 	font-family: Helvetica, sans-serif;
     font-weight: 600;
     min-width: 500px;
-	  border-collapse: collapse;
+	border-collapse: collapse;
 
 
 }
@@ -95,4 +110,16 @@ tr:nth-child(even) {
 .goBackToMenu{
 position: relative;
     margin: 0 100px;
+	color: #31B7F4;
+
+}
+
+.padLinks{
+position: relative;
+    margin: 0 0 -2px 20px;
+}
+
+a{
+color: #31B7F4;
+
 }
