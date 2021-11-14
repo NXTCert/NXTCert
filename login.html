@@ -12,6 +12,7 @@
  
      <link rel="stylesheet" href="main.css">
 
+
  </head>
  <body>
      <!-- keep at top -->
@@ -31,20 +32,16 @@
             </div>
             <hr>
             <div id="loginFormContainer">
-                <form action="">
+                <form action="login.php" method="post">
                     <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    <label for="email" >Email address:</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" id="email" required>
                     </div>
                     <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd"required>
                     </div>
-                    <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox"> Remember me
-                    </label>
-                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -52,19 +49,19 @@
                 <form action="">
                     <div class="form-group">
                         <label for="name">Username:</label>
-                        <input type="" class="form-control" placeholder="Username" id="name">
+                        <input type="" class="form-control" placeholder="Username" id="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email address:</label>
-                        <input type="email" class="form-control" placeholder="Email" id="regEmail">
+                        <input type="email" class="form-control" placeholder="Email" id="regEmail" required>
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" placeholder="Password" id="regpwd">
+                        <input type="password" class="form-control" placeholder="Password" id="regpwd" required>
                     </div>
                     <div class="form-group">
                         <label for="confirmpwd">Confirm Password:</label>
-                        <input type="password" class="form-control" placeholder="Confirm Password" id="confirmpwd">
+                        <input type="password" class="form-control" placeholder="Confirm Password" id="confirmpwd" required>
                     </div>
                         <button type="submit" class="btn btn-primary">Register</button>
                 </form>
@@ -103,6 +100,19 @@
                 registerBtn.classList.add('activeTab');
     
             }
+
+            $(document).ready(function(){
+                $("#confirmpwd").keyup(function(){
+                    if ($('#regpwd').val() == $('#confirmpwd').val() & $('#confirmpwd').val() != '') {
+		                $('#confirmpwd').css('border-color', 'green');
+		            } else 
+		                $('#confirmpwd').css('border-color', 'red');
+                    });
+                $("#confirmpwd").keydown(function(){
+
+                    $("#confirmpwd").css("background-color", "white");
+                });
+            });
         </script>
 
 
