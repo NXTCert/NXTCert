@@ -1,0 +1,101 @@
+.quizContainer{
+    margin: 100px auto;
+    width: 55%;
+	height: auto; /*250px for just the first question */
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+	position: relative;
+}
+
+h3{
+	text-align: center;
+	color: black;
+	font-family: Helvetica, sans-serif;
+    font-weight: 300;
+	font-size: 25px;
+}
+
+.container form{
+	width: 280px;
+	position: absolute; 
+	top: 100px;
+	left: 40px;
+	transition: 0.8s;
+}
+
+.button-box{
+	width: auto;
+	margin: 50px auto;
+    text-align:  center;
+}
+
+button{
+	width: 150px;
+	height: 40px;
+	margin: 0 10px;
+	background: linear-gradient(to right, #AED6f1, #31B7F4);
+	border-radius: 30px;
+	border: 0;
+	outline: none;
+	color: black;
+	cursor: pointer;
+	
+}
+
+
+#form2{
+	left: 900px;
+}
+
+#form3{
+	right: 800px;
+}
+
+.step-row{
+	width: 360px;
+	height: 40px; 
+	padding-top: 10px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	    box-shadow: 0 -1px 0px -1px ;
+	position: relative;
+
+}
+.step-col{
+	width: 120px;
+	text-align: center;
+	color: #333;
+	position: relative;
+}
+
+
+#progress{
+	position: absolute;
+	    margin-left: auto;
+    margin-right: auto;
+	height: 100%;
+	width: 120px;
+	background: linear-gradient(to right, #AED6f1, #31B7F4);
+}
+
+#progress::after{
+	/*trying to make it look like an arrow similar to our logo*/
+	content: '';
+	height: 0;
+	width: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	position: absolute;
+	right: -20px;
+	top: 0;
+	border-left: 20px solid #31B7F4;
+}
+
+.resultsButton{
+    background-color: #31B7F4;
+}
