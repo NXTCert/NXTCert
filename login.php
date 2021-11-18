@@ -2,6 +2,13 @@
 
 session_start(); /* Starts the session */
 require '/var/vendor/autoload.php';
+
+try {
+    $mongoDbClient = new MongoDB\Client('mongodb://localhost:27017');
+} catch (Exception $error) {
+    echo $error->getMessage();
+    die(1);
+}
 // $client = new MongoDB\Client("mongodb://localhost:27017");
 // $collection = $client->nxtcert->users;
 
