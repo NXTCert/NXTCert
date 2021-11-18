@@ -42,14 +42,14 @@
         
                                    //name for each checkbox input industry[]
 
-certType = array();
+certType: array();
 
 if(isset($_POST['certificationType'])) {
     $selectedcertificationType = $_POST['certificationType'];
 
     echo "You chose the following color(s): <br>";
     foreach ($selectedcertificationType as $industry){
-        array_push($industries, $industry;
+        array_push($industries, $industry);
     }}
 //        
 //        // sanitize the value / check if box is selected
@@ -150,14 +150,14 @@ if(isset($_POST['certificationType'])) {
                    
                                //name for each checkbox input industry[]
 
-careerIntrest = array();
+careerIntrest: array();
 
 if(isset($_POST['careers'])) {
     $selectedcareers = $_POST['careers'];
 
     echo "You chose the following color(s): <br>";
     foreach ($selectedcareers as $industry){
-        array_push($industries, $industry;
+        array_push($industries, $industry);
     }}
 //        
 //                // sanitize the value / check if box is selected
@@ -267,4 +267,3 @@ Reference:
 https://www.w3schools.com/php/php_switch.asp
 https://www.phptutorial.net/php-tutorial/php-checkbox/
 -->
-
