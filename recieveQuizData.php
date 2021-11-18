@@ -13,6 +13,7 @@
     
      // Check if the form is submitted
     if ( isset( $_POST['submit'] ) ){
+
     
     $collection->update($user = $_SESSION['UserData']['Username']);
     
@@ -224,6 +225,7 @@ if ($five_hundred_plus ) {
     array('$set'=>array("$500+"=>$five_hundred_plus ));
 }
 
+
    echo "Document updated successfully";
 
     // now display the updated document
@@ -233,6 +235,7 @@ if ($five_hundred_plus ) {
     echo "Updated document";
 
     foreach ($cursor as $document) {
+
 //        echo $document["firstname"] . "\n";
 //        echo $document["lastname"] . "\n";
 //        echo $document["title"] . "\n";
@@ -246,3 +249,4 @@ Reference:
 https://www.w3schools.com/php/php_switch.asp
 https://www.phptutorial.net/php-tutorial/php-checkbox/
 -->
+
