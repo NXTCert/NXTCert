@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
     echo "Connection to database successfully";
 
     // select a database
-    $db = $m->nxtcert;
+    $db = $client->nxtcert;
     echo "Database mydb selected";
 
     $collection = $client->nxtcert->users;
