@@ -1,32 +1,29 @@
 <?php 
 
+// create table users
+// (
+// U_Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+// UserId varchar(255) DEFAULT NULL,
+// UserPassword varchar(255) DEFAULT NULL,
+// primary key(U_Id),
+// UNIQUE KEY `UserId` (`UserId`)
+// );
+// INSERT INTO users(UserId, UserPassword) VALUES ('test@test', MD5('1234'));
+
 session_start(); /* Starts the session */
-require '/var/vendor/autoload.php';
-
-try {
-    $mongoDbClient = new MongoDB\Client('mongodb://localhost:27017');
-} catch (Exception $error) {
-    echo $error->getMessage();
-    die(1);
-}
-// $client = new MongoDB\Client("mongodb://localhost:27017");
-// $collection = $client->nxtcert->users;
-
-echo "database selected";
-//$m= new MongoDB\Client("mongodb://127.0.0.1/");
-   // select a database
+require_once 'db_config.php'; 
 
 /* Check Login form submitted */
 if(isset($_POST['submit'])){
 /* Define username and associated password array */
-    $logins = array('test@test' => '1234','user@user' => 'password');
+    // $logins = array('test@test' => '1234','user@user' => 'password');
 
     /* Check and assign submitted Username and Password to new variable */
     $Username = isset($_POST['email']) ? $_POST['email'] : '';
     $Password = isset($_POST['password']) ? $_POST['password'] : '';
-
-
-    if (isset($logins[$Username]) && $logins[$Username] == $Password){
+    $sql = "SELECT UserId, UserPassword FROM users WHERE UserID = '".$Username."' AND  UserPassword = '".md5($Password)."'";
+    $result = $db->query($sql);
+    if ($result->num_rows > 0){
         echo "logging in";
         header("location:profile.php");
 
@@ -35,7 +32,7 @@ if(isset($_POST['submit'])){
         exit;
     } else {
         echo "invalid login";
-        header('Refresh: 2; URL = login.html');
+        header('Refresh: 1; URL = login.html');
     }
 }
 
