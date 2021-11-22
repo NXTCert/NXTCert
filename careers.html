@@ -9,12 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+   
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
    	<link rel="stylesheet"href="AboutUS.css">
-
+   	<link rel="stylesheet"href="graph.css">
 	 <link rel="stylesheet" href="main.css">	 
 	 <link rel="stylesheet" href="index.css">
+
 	 
 
 
@@ -133,7 +136,7 @@
 </div>
 
 
-<!-- START OF GRAPH CODE -Chelsey --> 
+<!-- START OF GRAPH CODE -Chelsey (first attempt)
 <div class="graphContainer box">
 	 <a class="btn" href="https://www.forbes.com/sites/louiscolumbus/2021/01/28/glassdoors-50-best-jobs-in-america-for-2021-dominated-by-tech-careers/?sh=1cb441f4433f">
                     
@@ -148,9 +151,73 @@
 </div>	
   </div>
    
+	 -->
+<div class="chartMenu">
+	<br>
+	
+      <p style="text-align: center; font-size: 40px;"><u>Glassdoor's 50 best Jobs in America for 2021</u></p>
+	<p style="text-align: center">Technology continues to dominate the job market. This graph demonstrates the fact that the majority of the most in demand jobs right now are related to tech. Obtaining a certification is a brilliant way edge out competition in the demanding market. The dataset below is front the forbes article. </p>
+	
+    </div>
+	 <br>
+	<br>
 
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
     <!-- keep at bottom -->
     <script>
+		
+	    const data = {
+      labels: ['Tech Program Manager', 'Enterprise Architect', 'Product Manager', 'Data Scientist', 'Software Engineer', 'DevOps Engineer', 'Info Security Engineer'],
+      datasets: [{
+        label: 'Median Base Salary',
+        data: [20000, 40000, 60000, 80000, 100000, 120000, 140000],
+        backgroundColor: [
+          '#31B7F4',
+       '#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+        ],
+		
+        borderColor: [
+             '#31B7F4',
+       '#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+			'#31B7F4', 
+			'#31B7F4',
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
         $(function(){
         $("#nav-placeholder").load("navbar.html");
         });
@@ -170,6 +237,6 @@
 
 <!--Resources: 
 https://www.forbes.com/sites/louiscolumbus/2021/01/28/glassdoors-50-best-jobs-in-america-for-2021-dominated-by-tech-careers/?sh=1cb441f4433f
-
+https://www.chartjs3.com/docs/chart/getting-started/
 https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08
 -->
