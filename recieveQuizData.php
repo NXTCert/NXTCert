@@ -1,14 +1,16 @@
 <?php session_start(); 
 
+require 'vendor/autoload.php';
+
     /* Starts the session */
-    $m = new MongoClient();
+    $client = new MongoDB\Client("mongodb://localhost:27017");
     echo "Connection to database successfully";
 
     // select a database
-    $db = $m->nxtcert;
+    $db = $client->nxtcert;
     echo "Database mydb selected";
 
-    $collection = $db->users;
+    $collection = $client->nxtcert->users;
     echo "Collection selected succsessfully";
     
      // Check if the form is submitted
@@ -16,7 +18,7 @@
     
     $collection->update($user = $_SESSION['UserData']['Username']);
 
-        education:'';
+        education: '';
         budget: '';
 
 
