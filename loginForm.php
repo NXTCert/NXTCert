@@ -1,3 +1,10 @@
+
+<?php 
+session_start();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -12,7 +19,6 @@
  
      <link rel="stylesheet" href="main.css">
 
-
  </head>
  <body>
      <!-- keep at top -->
@@ -25,14 +31,25 @@
         <div class= "formsContainer ">
             <div>
                 <div class="tabsContainer">
-                    <button id="loginBtn" class="activeTab" onclick="displayLogin()">Login</button>
-                    <button id="registerBtn" onclick="displayRegister()">Register</button>
+                    <button id="loginBtn" class="activeTab">Login</button>
+                    <a href='/registerForm.php'><button id="registerBtn" class="myButton">Register</button></a>
                 
                 </div>
             </div>
             <hr>
             <div id="loginFormContainer">
                 <form action="login.php" method="post">
+                <p id="errorMsg">
+                    <?PHP
+                        if( isset($_SESSION['Error']) )
+                        {
+                                echo $_SESSION['Error'];
+                        
+                                unset($_SESSION['Error']);
+                        
+                        }
+                    ?>
+                </p>
                     <div class="form-group">
                     <label for="email" >Email address:</label>
                     <input type="email" name="email" class="form-control" placeholder="Enter email" id="email" required>
@@ -45,7 +62,7 @@
                     <button type="submit" name= "submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-            <div id="registerFormContainer">
+            <!-- <div id="registerFormContainer">
                 <form action="">
                     <div class="form-group">
                         <label for="name">Username:</label>
@@ -65,43 +82,43 @@
                     </div>
                         <button type="submit" name="register" class="btn btn-primary">Register</button>
 
-
+                        
                 </form>
-            </div>
+            </div> -->
         </div>
         
         <script>
-            function displayLogin() {
-              var login = document.getElementById("loginFormContainer");
-              var register = document.getElementById("registerFormContainer");
-              var loginBtn = document.getElementById("loginBtn");
-              var registerBtn = document.getElementById("registerBtn");
+            // function displayLogin() {
+            //   var login = document.getElementById("loginFormContainer");
+            //   var register = document.getElementById("registerFormContainer");
+            //   var loginBtn = document.getElementById("loginBtn");
+            //   var registerBtn = document.getElementById("registerBtn");
 
 
 
-              login.style.display = "block";
-              register.style.display = "none";
+            //   login.style.display = "block";
+            //   register.style.display = "none";
 
-              loginBtn.classList.add('activeTab');
-              registerBtn.classList.remove('activeTab');
+            //   loginBtn.classList.add('activeTab');
+            //   registerBtn.classList.remove('activeTab');
 
 
               
-            }
+            // }
 
-            function displayRegister() {
-                var login = document.getElementById("loginFormContainer");
-                var register = document.getElementById("registerFormContainer");
-                var loginBtn = document.getElementById("loginBtn")
-                var registerBtn = document.getElementById("registerBtn")
+            // function displayRegister() {
+            //     var login = document.getElementById("loginFormContainer");
+            //     var register = document.getElementById("registerFormContainer");
+            //     var loginBtn = document.getElementById("loginBtn")
+            //     var registerBtn = document.getElementById("registerBtn")
 
-                login.style.display = "none";
-                register.style.display = "block";
+            //     login.style.display = "none";
+            //     register.style.display = "block";
 
-                loginBtn.classList.remove('activeTab');
-                registerBtn.classList.add('activeTab');
+            //     loginBtn.classList.remove('activeTab');
+            //     registerBtn.classList.add('activeTab');
     
-            }
+            // }
 
             $(document).ready(function(){
                 $("#confirmpwd").keyup(function(){

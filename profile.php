@@ -1,12 +1,24 @@
 <?php 
 session_start();
+require_once 'db_config.php'; 
 
  /* Starts the session */
-if(!isset($_SESSION['UserData']['Username'])){
-    header("location:login.html");
+if(!isset($_SESSION['UserData']['UserId'])){
+    header("location:loginForm.php");
     exit;
 }
-$user = $_SESSION['UserData']['Username'];
+$userEmail = $_SESSION['UserData']['UserId'];
+
+$sql = "SELECT * FROM users WHERE UserID = '".$userEmail."'";
+$result = $db->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+       $user = $row["username"];             
+    }
+ } else {
+    printf('No record found.<br />');
+ }
 
 ?>
 
@@ -38,7 +50,9 @@ $user = $_SESSION['UserData']['Username'];
         <div class="avatar avatar-xl">
             <img src="images/blank-profile-picture-973460.svg" alt="Profile Picture" class="profile_pic avatar-img rounded-circle" />
             <h4 class="username"><?php echo $user; ?></h4>
-            <p class="email"><span>enteremail@gmail.com</span></p>
+
+            
+            <p class="email"><?php echo $userEmail; ?></p>
         </div>
          
         <details class="favorite">
