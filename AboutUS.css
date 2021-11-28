@@ -86,7 +86,8 @@ justify-content: right;
 /* centering our cards for each person */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 300px;
+  height: 550px;
   margin: auto;
   text-align: center;
   font-family: Helvetica, sans-serif;
@@ -95,6 +96,7 @@ justify-content: right;
 
  
 }
+/*
 .card1 {
   box-shadow: 2px 12px 12px  rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -106,6 +108,7 @@ justify-content: right;
 
  
 }
+*/
 .titleLighter {
   color: grey;
   font-size: 18px;
