@@ -487,5 +487,18 @@ FORMAT FOR CERTS
 			 </div>
 
 
+i
+CREATE TABLE certs (
+    certId INT NOT NULL AUTO_INCREMENT,
+	industry VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+	cost DECIMAL(10 , 2 ) NULL,
+    costBreakdown VARCHAR(255) NULL,
+	time INT NULL,
+	url VARCHAR(255) NOT NULL,
+	description VARCHAR(255) NOT NULL,
+	notes VARCHAR(255) NULL,
+	experience TINYINT,
+    PRIMARY KEY (certId)
+);
 
--->
