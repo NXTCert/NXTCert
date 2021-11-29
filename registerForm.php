@@ -171,7 +171,7 @@ session_start();
     <!-- keep at bottom -->
     <script>
         $(function(){
-        $("#nav-placeholder").load("navbar.html");
+        $("#nav-placeholder").load("navbar.php");
         });
     </script>
 

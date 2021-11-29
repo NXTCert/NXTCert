@@ -1,3 +1,10 @@
+<?php 
+session_start();
+require_once 'db_config.php'; 
+$userEmail = $_SESSION['UserData']['UserId'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -21,8 +28,30 @@
     </div>
 <!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
     <p id="certTitle"> Your Recommended Certifications &nbsp;&nbsp;<i id="bars" class="fas fa-bars barsIcon"></i></p>
+
+	<?php 
+		if(!isset($_SESSION['UserData']['UserId'])){
+	?>
+		<button id="quizButton"> <a href='loginForm.php'>Login to Take the Quiz</a></button>
+	<?php
+		}
+		else{
+			$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userEmail."'";
+			$result = $db->query($sql);
+
+			if ($result->num_rows > 0) {
+				echo "load custom certs";
+			} else {
+	?>
+		<button id="quizButton"> <a href='newQuiz11-15.php'>Take the Quiz</a></button>
+	<?php 
+		}}
+	?>
+
+
+
     
-     <div class="certs">
+     <!-- <div class="certs">
          <p class="title">Certification Title</p>
          <p class="source">Certification Source | $0</p>
          <p class="description">Description: </p>
@@ -31,7 +60,7 @@
      </div>
      <div class="category">
 		 <br>
-		 
+		  -->
 <!-- START of listing the certs - Chelsey -->
  
 		 <p id="searchTitle" ><a id="browseancor"><u id="test">Browse Certifications by Category</u></a></p>
@@ -465,7 +494,7 @@ Professional Certificate"</p>
     <!-- keep at bottom -->
     <script>
         $(function(){
-        $("#nav-placeholder").load("navbar.html");
+        $("#nav-placeholder").load("navbar.php");
         });
     </script>
 

@@ -96,7 +96,7 @@ if ($result->num_rows > 0) {
     <!-- keep at bottom -->
     <script>
         $(function(){
-        $("#nav-placeholder").load("navbar.html");
+        $("#nav-placeholder").load("navbar.php");
         });
     </script>
 
