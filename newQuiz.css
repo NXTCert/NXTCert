@@ -3,6 +3,7 @@
   font-size: 60px;
   line-height: 20px;
 }
+
 #myDIV {
     display: none;
 }
@@ -26,8 +27,8 @@ p{
 
 }
 .container {
+    display: block;
     max-width: 60%;
-	display: none;
 	background-color: white;
     margin: 50px auto;
     text-align: left;

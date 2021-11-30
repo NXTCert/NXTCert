@@ -42,7 +42,10 @@ if(isset($_POST['submit'])){
     echo "budget:";
     echo $userBudget;
     echo "budget:";
-
+    
+    header("location:certificates.php");
+      
+    exit;
 
 }
 

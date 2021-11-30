@@ -1,7 +1,10 @@
 <?php 
 session_start();
 require_once 'db_config.php'; 
-$userEmail = $_SESSION['UserData']['UserId'];
+$userId = $_SESSION['UserData']['UserId'];
+
+
+
 ?>
 
 
@@ -36,11 +39,70 @@ $userEmail = $_SESSION['UserData']['UserId'];
 	<?php
 		}
 		else{
-			$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userEmail."'";
+			$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userId."'";
 			$result = $db->query($sql);
 
 			if ($result->num_rows > 0) {
-				echo "load custom certs";
+
+				$budgetQuery = "SELECT budgetId from userBudgets where userid = '".$userId."'";
+				$budget = $db->query($budgetQuery);
+				while($row = $budget->fetch_assoc()) {
+					$userBudget = $row["budgetId"];             
+				 }
+
+
+
+				$sql = "SELECT experienceId from userExperience where userid = '".$userId."'";
+				$experience = $db->query($sql);
+				while($row = $experience->fetch_assoc()) {
+					$userExperience = $row["experienceId"]; 
+					           
+				 }
+
+
+				$userIndustryArray = array();
+				$sql = "SELECT industryid FROM userIndustries WHERE UserID = '".$userId."'";
+				$industries = $db->query($sql);
+				while($row = $industries->fetch_assoc()) {
+					$userind = $row["industryid"]; 
+					array_push($userIndustryArray,$userind);           
+				 }
+				// print_r($userIndustryArray);
+				$implodedArrary = implode($userIndustryArray, ',');
+
+
+				$sql = "SELECT * FROM certs WHERE experienceid = '".$userExperience."' AND budgetid <= '".$userBudget."' AND industryid in (".$implodedArrary.")";
+				$certs = $db->query($sql);
+				$rowcount = mysqli_num_rows($certs);
+				// printf("Result set has %d rows.\n",$rowcount);
+				
+				if ($rowcount > 0){
+					while($row = $certs->fetch_assoc()) {
+						$title = $row["title"];
+						$description = $row["description"];
+						$cost = $row["cost"];
+						$url = $row["url"];
+			 
+						?>
+	
+						<div class="certs">
+						<p class="title"><?php echo $title; ?></p>
+						<p class="source">Cost: $<?php echo $cost; ?>  <br>
+						<p class="description">Description: <?php echo $description; ?> </p>
+						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+							<i class="far fa-heart heartIcon"></i>
+	
+						</div>
+	
+						<?php
+					 }
+				} else{
+					echo "No certification matching your criteria, please browse certs by industry below.";
+				}
+
+				
+
+
 			} else {
 	?>
 		<button id="quizButton"> <a href='newQuiz11-15.php'>Take the Quiz</a></button>
