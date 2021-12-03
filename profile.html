@@ -19,7 +19,6 @@
 
      <div class="container pic+name+email">
         <div class="avatar avatar-xl">
-            <img src="images/blank-profile-picture-973460.svg" alt="Profile Picture" class="profile_pic avatar-img rounded-circle" />
             <h4 class="username">Username</h4>
             <p class="email"><span>enteremail@gmail.com</span></p>
         </div>
@@ -58,7 +57,17 @@
 
         <details>
             <summary>Edit Profile</summary>
-            <p>Make changes to the profile as you see fit</p>
+            <p>Make changes to the profile</p>
+            <div class="editProfile">
+                <form method="post" action="#">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" class="form-control" name="username" style="width:20em;" placeholder="Enter your Username" value="<?php echo $row['username']; ?>" required />
+                        
+                    </div>
+                </form>
+            </div>
+            
         </details>
      </div>
 

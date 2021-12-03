@@ -48,7 +48,6 @@ if ($result->num_rows > 0) {
     <a href = "logout.php">Log Out</a>
      <div class="container pic+name+email">
         <div class="avatar avatar-xl">
-            <img src="images/blank-profile-picture-973460.svg" alt="Profile Picture" class="profile_pic avatar-img rounded-circle" />
             <h4 class="username"><?php echo $user; ?></h4>
 
             
@@ -89,7 +88,7 @@ if ($result->num_rows > 0) {
 
         <details>
             <summary>Edit Profile</summary>
-            <p>Make changes to the profile as you see fit</p>
+            <p>Make changes to the profile</p>
         </details>
      </div>
 
