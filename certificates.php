@@ -1,3 +1,13 @@
+<?php 
+session_start();
+require_once 'db_config.php'; 
+$userId = $_SESSION['UserData']['UserId'];
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -21,8 +31,89 @@
     </div>
 <!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
     <p id="certTitle"> Your Recommended Certifications &nbsp;&nbsp;<i id="bars" class="fas fa-bars barsIcon"></i></p>
+
+	<?php 
+		if(!isset($_SESSION['UserData']['UserId'])){
+	?>
+		<button id="quizButton"> <a href='loginForm.php'>Login to Take the Quiz</a></button>
+	<?php
+		}
+		else{
+			$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userId."'";
+			$result = $db->query($sql);
+
+			if ($result->num_rows > 0) {
+
+				$budgetQuery = "SELECT budgetId from userBudgets where userid = '".$userId."'";
+				$budget = $db->query($budgetQuery);
+				while($row = $budget->fetch_assoc()) {
+					$userBudget = $row["budgetId"];             
+				 }
+
+
+
+				$sql = "SELECT experienceId from userExperience where userid = '".$userId."'";
+				$experience = $db->query($sql);
+				while($row = $experience->fetch_assoc()) {
+					$userExperience = $row["experienceId"]; 
+					           
+				 }
+
+
+				$userIndustryArray = array();
+				$sql = "SELECT industryid FROM userIndustries WHERE UserID = '".$userId."'";
+				$industries = $db->query($sql);
+				while($row = $industries->fetch_assoc()) {
+					$userind = $row["industryid"]; 
+					array_push($userIndustryArray,$userind);           
+				 }
+				// print_r($userIndustryArray);
+				$implodedArrary = implode($userIndustryArray, ',');
+
+
+				$sql = "SELECT * FROM certs WHERE experienceid = '".$userExperience."' AND budgetid <= '".$userBudget."' AND industryid in (".$implodedArrary.")";
+				$certs = $db->query($sql);
+				$rowcount = mysqli_num_rows($certs);
+				// printf("Result set has %d rows.\n",$rowcount);
+				
+				if ($rowcount > 0){
+					while($row = $certs->fetch_assoc()) {
+						$title = $row["title"];
+						$description = $row["description"];
+						$cost = $row["cost"];
+						$url = $row["url"];
+			 
+						?>
+	
+						<div class="certs">
+						<p class="title"><?php echo $title; ?></p>
+						<p class="source">Cost: $<?php echo $cost; ?>  <br>
+						<p class="description">Description: <?php echo $description; ?> </p>
+						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+							<i class="far fa-heart heartIcon"></i>
+	
+						</div>
+	
+						<?php
+					 }
+				} else{
+					echo "No certification matching your criteria, please browse certs by industry below.";
+				}
+
+				
+
+
+			} else {
+	?>
+		<button id="quizButton"> <a href='newQuiz11-15.php'>Take the Quiz</a></button>
+	<?php 
+		}}
+	?>
+
+
+
     
-     <div class="certs">
+     <!-- <div class="certs">
          <p class="title">Certification Title</p>
          <p class="source">Certification Source | $0</p>
          <p class="description">Description: </p>
@@ -31,7 +122,7 @@
      </div>
      <div class="category">
 		 <br>
-		 
+		  -->
 <!-- START of listing the certs - Chelsey -->
  
 		 <p id="searchTitle" ><a id="browseancor"><u id="test">Browse Certifications by Category</u></a></p>
@@ -465,7 +556,7 @@ Professional Certificate"</p>
     <!-- keep at bottom -->
     <script>
         $(function(){
-        $("#nav-placeholder").load("navbar.html");
+        $("#nav-placeholder").load("navbar.php");
         });
     </script>
 
@@ -487,5 +578,18 @@ FORMAT FOR CERTS
 			 </div>
 
 
+i
+CREATE TABLE certs (
+    certId INT NOT NULL AUTO_INCREMENT,
+	industry VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+	cost DECIMAL(10 , 2 ) NULL,
+    costBreakdown VARCHAR(255) NULL,
+	time INT NULL,
+	url VARCHAR(255) NOT NULL,
+	description VARCHAR(255) NOT NULL,
+	notes VARCHAR(255) NULL,
+	experience TINYINT,
+    PRIMARY KEY (certId)
+);
 
--->
