@@ -63,14 +63,23 @@
                     <div class="form-group">
                         <label>Username:</label>
                         <input type="text" class="form-control" name="username" style="width:20em;" placeholder="Enter your Username" value="<?php echo $row['username']; ?>" required />
-                        
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" class="form-control" name="email" style="width:20em;" placeholder="Enter your Email" value="<?php echo $row['UserId']; ?>" required />
                     </div>
                 </form>
             </div>
             
         </details>
      </div>
-
+<?php
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $email = $_POST['email];
+    $query = "UPDATE users SET 
+}
+?>
     <!-- keep at bottom -->
     <script>
         $(function(){
