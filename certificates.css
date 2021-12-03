@@ -21,6 +21,26 @@
 
 
 }
+
+#quizButton{
+    color:white;
+    border: 1px solid#31B7F4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px auto;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: .75em;
+    background-color: #31B7F4;
+
+}
+#quizButton > a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
 #test{
 	text-align: center;
 }

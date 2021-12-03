@@ -1,87 +1,77 @@
 <?php 
 
-session_start(); /* Starts the session */
-require '/var/vendor/autoload.php';
-// $client = new MongoDB\Client("mongodb://localhost:27017");
-// $collection = $client->nxtcert->users;
+// create table users
+// (
+// U_Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+// UserId varchar(255) DEFAULT NULL,
+// UserPassword varchar(255) DEFAULT NULL,
+// primary key(U_Id),
+// UNIQUE KEY `UserId` (`UserId`)
+// );
+// INSERT INTO users(UserId, UserPassword) VALUES ('test@test', MD5('1234'));
 
-echo "database selected";
-//$m= new MongoDB\Client("mongodb://127.0.0.1/");
-   // select a database
+session_start(); /* Starts the session */
+require_once 'db_config.php'; 
 
 /* Check Login form submitted */
 if(isset($_POST['submit'])){
 /* Define username and associated password array */
-    $logins = array('test@test' => '1234','user@user' => 'password');
+    // $logins = array('test@test' => '1234','user@user' => 'password');
 
     /* Check and assign submitted Username and Password to new variable */
-    $Username = isset($_POST['email']) ? $_POST['email'] : '';
+    $UserId = isset($_POST['email']) ? $_POST['email'] : '';
     $Password = isset($_POST['password']) ? $_POST['password'] : '';
-
-
-    if (isset($logins[$Username]) && $logins[$Username] == $Password){
+    $sql = "SELECT UserId, UserPassword FROM users WHERE UserID = '".$UserId."' AND  UserPassword = '".md5($Password)."'";
+    $result = $db->query($sql);
+    if ($result->num_rows > 0){
         echo "logging in";
-        header("location:profile.php");
+        
 
-        $_SESSION['UserData']['Username']=$Username;
+        $_SESSION['UserData']['UserId']=$UserId;
+        // echo "session set";
+        
+        // $query = "SELECT * FROM users WHERE UserId='$UserId'";
+        // $row =$db->query($query);
+        // $username = $row['username'];
+        
+        // echo $username;
+        // $_SESSION['UserData']['Username']=$username;
+
+        header("location:profile.php");
         
         exit;
     } else {
-        echo "invalid login";
-        header('Refresh: 2; URL = login.html');
+        $_SESSION['Error'] = "Invalid username or password.";
+        header('location:loginForm.php');
     }
 }
 
-$logins = array('test@test' => '1234','user@user' => 'password');
 
-/* Check Login form submitted */
-if(isset($_POST['submit'])){
-    /* Define username and associated password array */
-   
-    
-    /* Check and assign submitted Username and Password to new variable */
-    $Username = isset($_POST['email']) ? $_POST['regemail'] : '';
-    $Password = isset($_POST['password']) ? $_POST['regpassword'] : '';
-    
-    if (isset($logins[$Username]) && $logins[$Username] == $Password){
-        $_SESSION['UserData']['Username']=$Username;
-        header("location:profile.php");
+
+if(isset($_POST['register'])){
+    $UserId = isset($_POST['email']) ? $_POST['email'] : '';
+    $Username = isset($_POST['username']) ? $_POST['username'] : '';
+    $Password = isset($_POST['password']) ? $_POST['password'] : '';
+
+    $sql = "SELECT UserId FROM users WHERE UserID = '".$UserId."'";
+    $result = $db->query($sql);
+
+
+    if ($result->num_rows > 0){
+        echo $UserId;
+        $_SESSION['Error'] = "This email already in use";
+        header("location:registerForm.php");
+      
         exit;
+
     } else {
-        echo "invalid login";
-        header('Refresh: 2; URL = login.html');
-    }
-    }
-
-
-    if(isset($_POST['register'])){
-
-
-        // $document = array( 
-        //    "title" => "MongoDB", 
-        //    "description" => "database", 
-        //    "likes" => 100,
-        //    "url" => "http://www.tutorialspoint.com/mongodb/",
-        //    "by" => "tutorials point"
-        // );
-         
-        // $collection->insert($document);
-        // echo "Document inserted successfully";
-        /* Define username and associated password array */
-        
-        
-        /* Check and assign submitted Username and Password to new variable */
-        $Username = isset($_POST['email']) ? $_POST['email'] : '';
-        $Password = isset($_POST['password']) ? $_POST['password'] : '';
-        
-        
-        if (array_push($logins, $Username, $Password)){
-            $_SESSION['UserData']['Username']=$Username;
-            header("location:profile.php");
-            exit;
-        } else {
-            echo "error";
-            header('Refresh: 2; URL = login.html');
+        $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
+        $result = $db->query($addUser);
+        echo "logging in";
+        header("location:profile.php");
+        $_SESSION['UserData']['UserId']=$UserId;
+        exit;
         }
-        }
+}
+
 ?>
