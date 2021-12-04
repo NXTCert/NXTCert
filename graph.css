@@ -6,7 +6,7 @@
       }
       .chartMenu {
         width: 100vw;
-        height: 40px;
+        height: 80px;
         background: #e7e4e4;
         color: black;
       }
@@ -16,14 +16,14 @@
       }
       .chartCard {
         width: 100vw;
-        height: calc(100vh - 40px);
+        height: calc(100vh - 80px);
         background:#e7e4e4; 
         display: flex;
         align-items: center;
         justify-content: center;
       }
       .chartBox {
-        width: 700px;
+        width: 1000px;
         padding: 20px;
         border-radius: 20px;
     	border: 1px solid slategray;        
