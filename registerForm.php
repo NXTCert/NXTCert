@@ -18,7 +18,7 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
-     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 
 
  </head>
@@ -56,7 +56,7 @@ session_start();
             <div id="registerFormContainer">
                 <form action="login.php" method="post">
 
-                <p id="errorMsg">
+                <p class="errorMsg" id="error1">
                     <?PHP
                         if( isset($_SESSION['Error']) )
                         {
@@ -68,7 +68,7 @@ session_start();
                     ?>
                 </p>
                     <div class="form-group">
-                        <label for="name">Username:</label>
+                        <label for="name">Name:</label>
                         <input type="" name="username" class="form-control" placeholder="Username" id="name" required>
                     </div>
                     <div class="form-group">
@@ -77,12 +77,15 @@ session_start();
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" onchange='PassCheck();' class="form-control" placeholder="Password" id="regpwd" required>
+                        <input type="password" onchange='PassCheck();' class="form-control" placeholder="Password" id="regpwd" minlength="8" required>
+                        <p class = "errorMsg" id="error2"></p>
                     </div>
                     <div class="form-group">
                         <label for="confirmpwd">Confirm Password:</label>
                         <input type="password" onchange='PassCheck();' name= password class="form-control" placeholder="Confirm Password" id="confirmpwd" required>
+                        
                     </div>
+                        <p class="errorMsg" id="error3"> </p>
                         <button type="submit"  id= "register" name="register" class="btn btn-primary">Register</button>
 
 
@@ -125,41 +128,45 @@ session_start();
 
             $(document).ready(function(){
                 $("#confirmpwd").keyup(function(){
+
                     if ($('#regpwd').val() == $('#confirmpwd').val() & $('#confirmpwd').val() != '') {
+                      
 		                $('#confirmpwd').css('border-color', 'green');
-                
+
+                        
 		            } else 
 		                $('#confirmpwd').css('border-color', 'red');
+                     
                         
                     });
-                $("#confirmpwd").keydown(function(){
 
-                    $("#confirmpwd").css("background-color", "white");
-                });
                 $("#regpwd").keyup(function(){
                     if ($('#regpwd').val() == $('#confirmpwd').val() & $('#confirmpwd').val() != '') {
+                       
 		                $('#confirmpwd').css('border-color', 'green');
-                
+                       
+           
 		            } else 
 		                $('#confirmpwd').css('border-color', 'red');
+                      
                         
                     });
-                $("#regpwd").keydown(function(){
 
-                    $("#confirmpwd").css("background-color", "white");
-                });
             });
 
 
             function PassCheck() {
             var password = document.getElementById('regpwd');
             var vpassword = document.getElementById('confirmpwd');
+            var error = document.getElementById('error3');
 
             if (password.value != vpassword.value) {
                 document.getElementById("register").disabled = true;
+                error.innerHTML = "Passwords do not match.";
             }
             else {
                 document.getElementById("register").disabled = false;
+                error.innerHTML = "";
             }
             }
 
