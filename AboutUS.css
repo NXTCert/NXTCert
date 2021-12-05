@@ -86,7 +86,8 @@ justify-content: right;
 /* centering our cards for each person */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 300px;
+  height: 555px;
   margin: auto;
   text-align: center;
   font-family: Helvetica, sans-serif;
@@ -175,6 +176,7 @@ text-align: center;
   }
   100% {
     opacity:1;
+  }
 }
 	
 @-webkit-keyframes fadeInLogo {

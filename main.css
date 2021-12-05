@@ -41,9 +41,7 @@ body{
     border-radius: 16px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
-#errorMsg{
-    color: red;
-}
+
 .myButton{
     border: none;
     font-size: 1em;
@@ -236,3 +234,15 @@ padding-top: 10px;
   -webkit-transform: rotate(135deg);
 }
 /*end of career page css CB */
+
+
+#error1{
+    color: red;
+}
+
+#error3 {
+    color: white;
+}
+.errorMsg {
+    color: red;
+}
