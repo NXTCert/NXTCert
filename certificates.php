@@ -159,6 +159,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
     
+   
      <!-- <div class="certs">
          <p class="title">Certification Title</p>
          <p class="source">Certification Source | $0</p>
@@ -209,7 +210,6 @@ $userId = $_SESSION['UserData']['UserId'];
 		<!-- <i class="fas fa-plus"></i> -->
 	 
 
-
 		<!-- ------------ AI Engineering Certifications --------------- -->
 	<p id="categoryTitle" ><a id="bottom1"><u>AI Engineering Certifications</u></a></p>
 			 
@@ -246,7 +246,6 @@ $userId = $_SESSION['UserData']['UserId'];
 					echo "No certifications";
 				}
 				?>
-
 
 
 
@@ -304,7 +303,6 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
-
 
 
 

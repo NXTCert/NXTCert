@@ -85,7 +85,7 @@ $userId = $_SESSION['UserData']['UserId'];
 <br>
 	<!--question 2 --> 
 	
-	<p class="titleQuestion"><strong>Question 2</strong>: What type of certifications are you interested in?</p>
+	<p class="titleQuestion"><strong>Question 2</strong>: What type of certifications are you interested in?(Select all that apply)</p>
 
       <label>
         <input type="checkbox" name="certificationType[]" value=1>AI Engineering
@@ -165,33 +165,33 @@ $userId = $_SESSION['UserData']['UserId'];
 	
 	<!--question 3 --> 
 	
-<p class="titleQuestion"><strong>Question 3</strong>: Which of these specific careers are you most interested in?</p>
+<p class="titleQuestion"><strong>Question 3</strong>: Which of these specific careers are you most interested in? (Select all that apply)</p>
 
       <label>
         <input type="checkbox" name="careers[]" value="Computer Network Architecture">Computer Network Architecture
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="careers[]" value="Computer Systems Analyst">Computer Systems Analyst
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="careers[]" value="Data Scientist">Data Scientist
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="careers[]" value="Database Andministator">Database Andministator
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	 <label>
         <input type="checkbox" name="careers[]" value="Information Security Analyst">Information Security Analyst  
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="careers[]" value="IT Manager">IT Manager
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
@@ -217,11 +217,11 @@ $userId = $_SESSION['UserData']['UserId'];
 <p class="titleQuestion"><strong>Question 4</strong>: What is your budget for the certification?</p>
 
       <label>
-        <input type="radio" name="budget" value=1>$0 - 300
+        <input type="radio" name="budget" value=1>$0 - 299
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="budget" value=2>$300 - 500
+        <input type="radio" name="budget" value=2>$300 - 499
         <span class="select"></span>
       </label>
       <label>
@@ -232,13 +232,14 @@ $userId = $_SESSION['UserData']['UserId'];
 	<br>
 	
 	<!-- start of code needed for php --> 
+	<!--
 <p style="text-align: center;" class="titleQuestion"><strong>Optional</strong>: Enter your username to save your results to your profile?</p>	
 	
 	<br>
 	<p> Username: <input type="text" name="name"></p><br>
 	
 	<br>
-
+-->
 <div class="holdSubmitRight">
       <input type="submit" name="submit" vlaue="Get Values"  id="goToNext1" >
 

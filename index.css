@@ -144,7 +144,7 @@ body{
     bottom: -1px;
     right: -2px;
     box-shadow: 5px 5px 10px darkslategray;
-    font-size: .8em;
+
 }
 #startbtn > a, #learnbtn > a{
     color: white;

@@ -10,6 +10,17 @@ body{
     text-align: right;
     margin-left: auto;
 }
+.a {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: yellow;
+  cursor: pointer;
+  font-size: 18px;
+}
+.active1, .a:hover {
+  background-color: red;
+}
 
 .logoImg{
     width: 200px;
@@ -179,12 +190,12 @@ body{
   border-bottom: 10px solid transparent;
   left: -19px;
   top: 14px;
-  transform: rotate(90deg);  
+  transform: rotate(90deg); 
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding-bottom: 20px;
 padding-top: 10px;
   
