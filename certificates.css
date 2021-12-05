@@ -67,6 +67,9 @@
 	 
 
 }
+p {
+    text-align: left;
+}
 .source{
     margin: 0 0 -2px 20px;
 	
@@ -87,6 +90,16 @@
     top: 15px;
     right: 40px;
 }
+
+.plusIcon{
+    float: right;
+    position: absolute;
+    top: 15px;
+    right: 95px;
+    font-weight: 500;
+}
+
+
 .barsIcon{
     color: #31B7F4;
 }

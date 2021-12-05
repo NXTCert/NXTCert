@@ -59,7 +59,7 @@ if(isset($_POST['register'])){
 
     if ($result->num_rows > 0){
         echo $UserId;
-        $_SESSION['Error'] = "This email already in use";
+        $_SESSION['Error'] = "This email is already in use";
         header("location:registerForm.php");
       
         exit;
