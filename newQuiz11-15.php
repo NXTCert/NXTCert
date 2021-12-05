@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['UserData']['UserId'])){
+    header("location:loginForm.php");
+    exit;
+}
+$userId = $_SESSION['UserData']['UserId'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,28 +56,28 @@
 <div class="container" id="myDIV">
    
 	<!-- 1 FORM --> 
-<form action="recieveQuizData.php" method="post" class="mb-3">
+<form action="quizResults.php" method="post" class="mb-3">
 	<p class="titleQuestion"><strong>Question 1</strong>: Describe your education and experience level</p>
 
       <label>
-        <input type="radio" name="education" value="low">Current College Student
+        <input type="radio" name="education" value=1>Current College Student
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="education" value="low">Self taught with no industry experience
+        <input type="radio" name="education" value=1>Self taught with no industry experience
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="education" value="medium">Self taught with industry experience
+        <input type="radio" name="education" value=2>Self taught with industry experience
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="education" value="medium">Recent college graduate with no experience
+        <input type="radio" name="education" value=2>Recent college graduate with no experience
         <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="radio" name="education" value="high">Professional with 5 - 10+ years of experience
+        <input type="radio" name="education" value=3>Professional with 5 - 10+ years of experience
         <span class="select"></span>
 		  
       </label> 
@@ -79,65 +88,75 @@
 	<p class="titleQuestion"><strong>Question 2</strong>: What type of certifications are you interested in?(Select all that apply)</p>
 
       <label>
-        <input type="checkbox" name="certificationType[]" value="AI Engineering">AI Engineering
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=1>AI Engineering
+        <span class="select"></span>
       </label>
       <label>
-        <input type="checkbox" name="certificationType[]" value="Business">Business
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=2>Business
+        <span class="select"></span>
       </label>
       <label>
-        <input type="checkbox" name="certificationType[]" value="Cloud">Cloud
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=3>Cloud
+        <span class="select"></span>
       </label>
       <label>
-        <input type="checkbox" name="certificationType[]" value="Cyber Security">Cyber Security
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=4>Cyber Security
+        <span class="select"></span>
 		  
       </label>
 	 <label>
-        <input type="checkbox" name="certificationType[]" value="Data Administation">Data Administation
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=6>Data Administation
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Date Engineering">Date Engineering
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=7>Date Engineering
+        <span class="select"></span>
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Data Science">Data Science
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=8>Data Science
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Data Solutions">Data Solutions
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=9>Data Solutions
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Database">Database
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=10>Database
+        <span class="select"></span>
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Development">Development
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=11>Development
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="certificationType[]" value="DevOps">DevOps
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=12>DevOps
+        <span class="select"></span>
+		  
+      </label>
+      <label>
+        <input type="checkbox" name="certificationType[]" value=13>Networking
+        <span class="select"></span>
+		  
+      </label>
+      <label>
+        <input type="checkbox" name="certificationType[]" value=14>Programming
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Project Management">Project Management
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=15>Project Management
+        <span class="select"></span>
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="certificationType[]" value="Tech Support">Tech Support
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="certificationType[]" value=16>Tech Support
+        <span class="select"></span>
 		  
       </label>
 	
@@ -176,18 +195,18 @@
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="careers[]" value="Product Manager">Product Manager
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="careers[]" value="Project Management">Product Manager
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Software Engineer">Software Engineer
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="careers[]" value="Development">Software Engineer
+        <span class="select"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Tech Support / Support Specalist">Tech Support / Support Specalist
-        <span class="selectCheck"></span>
+        <input type="checkbox" name="careers[]" value="Tech Support">Tech Support / Support Specalist
+        <span class="select"></span>
 		  
       </label> 
 	<br>
@@ -198,15 +217,15 @@
 <p class="titleQuestion"><strong>Question 4</strong>: What is your budget for the certification?</p>
 
       <label>
-        <input type="radio" name="budget" value="zero_to_three_hundred">$0 - 299
+        <input type="radio" name="budget" value=1>$0 - 299
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="budget" value="three_hundred_to_five_hundred">$300 - 500
+        <input type="radio" name="budget" value=2>$300 - 499
         <span class="select"></span>
       </label>
       <label>
-        <input type="radio" name="budget" value="five_hundred_plus">$500+
+        <input type="radio" name="budget" value=3>$500+
         <span class="select"></span>
       </label>
     
@@ -249,6 +268,7 @@ function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "none") {
     x.style.display = "block";
+    
   } else {
     x.style.display = "none";
   }

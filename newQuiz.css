@@ -4,6 +4,10 @@
   line-height: 20px;
 }
 
+#myDIV {
+    display: none;
+}
+
 .whyQuizDiv{
 	padding-top: 8%;
 	margin-left: auto;
@@ -23,8 +27,8 @@ p{
 
 }
 .container {
+    display: block;
     max-width: 60%;
-	display: none;
 	background-color: white;
     margin: 50px auto;
     text-align: left;
