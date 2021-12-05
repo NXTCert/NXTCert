@@ -113,6 +113,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
     
+   
      <!-- <div class="certs">
          <p class="title">Certification Title</p>
          <p class="source">Certification Source | $0</p>
@@ -163,7 +164,7 @@ $userId = $_SESSION['UserData']['UserId'];
 	<p id="categoryTitle" ><a id="bottom1"><u>AI Engineering Certifications</u></a></p>
 			 	  <div class="certs">
 				 <p class="title">Microsoft Certified: Azure AI Engineer Associate</p>
-				 <p class="source">Timeline: | Cost: $165 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $165 <br>
 				 <p class="description">Description: "Understand the components that make up the Azure AI portofolio. The Azure AI Engineer Associate Certification will give you the skills to design and build your own AI solutions using Azure Cognitive Services, Azure Cognitive Search, and Azure Bot Services. To obtain the Azure AI Engineer Associate Certification, you must be able to plan and manage an Azure Cognitive Services solution, implement computer vision solutions, implement natural language processing solutions, implement knowledge mining solutions, and implement conversational AI solutions." </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-ai-engineer/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
@@ -176,7 +177,7 @@ $userId = $_SESSION['UserData']['UserId'];
 	 <p id="categoryTitle"><a id="bottom2"><u>Business Certifications</u></a></p>
 			 <div class="certs">
 				 <p class="title">Microsoft Certified: Dynamics 365 Fundamentals (CRM)</p>
-				 <p class="source">Cost: $99 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $99 <br>
 				 <p class="description">Description: "The Dynamics 365 Fundamentals (CRM) Certification will expose you to the customer engagement capabilities of Dynamics 365. To obtain the Dynamics 365 Fundamentals (CRM) Certification, you must be able to describe Dynamics 365 Marketing, Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Project Operations, and shared features." </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/d365-fundamentals-customer-engagement-apps-crm/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
@@ -190,8 +191,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="description">Description: To obtain the Dynamics 365 Customer Service Functional Consultant Associate Certification, you must be able to manage cases and Knowledge Management, manage queues, entitlements, and service-level agreements, implement scheduling, implement Omnichannel for Customer Service, and manage analytics. </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/d365-functional-consultant-customer-service/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/d365-functional-consultant-customer-service/" target="_blank">Study Material | </a>
-				 <a href="" target="_blank">Exams: PL-200MB-230</a>
+				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/d365-functional-consultant-customer-service/" target="_blank">Study Material </a>
 
 			 </div>
 
@@ -223,7 +223,8 @@ $userId = $_SESSION['UserData']['UserId'];
 <div class="certs">
 				 <p class="title">Comptia Cloud+</p>
 				 <p class="source">Cost: $338 - $999 <br>
-				 <p class="description">Description: CompTIA Cloud+ is the only performance-based IT certification that considers cloud-based infrastructure services as part of larger IT system operations, regardless of platform. Migrating to the cloud allows mission-critical programs and data storage to be deployed, optimized, and protected. CompTIA Cloud+ certifies the technical abilities required to protect these priceless assets. </p>
+				 <p class="description">Description: CompTIA Cloud+ is the only performance-based IT certification that considers cloud-based infrastructure services as part of larger IT system operations, regardless of platform. Migrating to the cloud allows mission-critical programs and data storage to be deployed, optimized, and protected. CompTIA Cloud+ certifies the technical abilities required to protect these priceless assets.
+				 Note: Certification must be renewed every three years</p>
 				 <a href="https://www.comptia.org/certifications/cloud" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
 				 <a class="padLinks" href="https://www.comptia.org/certifications/cloud" target="_blank">Study Material </a>
@@ -247,12 +248,12 @@ $userId = $_SESSION['UserData']['UserId'];
 			 </div>
 <div class="certs">
 				 <p class="title">CompTIA Security</p>
-				 <p class="source">Timeline: Self Paced | Cost: $549 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $549 <br>
 				 <p class="description">Description: The CompTIA Security+ certification shows employers from the cybersecurity sector that you have a base understanding of network security and risk management needed to protect their business. </p>
 				 <a href="https://www.comptia.org/landing/certificationsecurityplus/index.html?gclid=CjwKCAjwzOqKBhAWEiwArQGwaE7IIWxafunBcR2kz1xHNq6zTq662lGRgInjJxii15DDmqC6zYaQ-RoCDVwQAvD_BwE" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://www.comptia.org/landing/certificationsecurityplus/index.html?gclid=CjwKCAjwzOqKBhAWEiwArQGwaE7IIWxafunBcR2kz1xHNq6zTq662lGRgInjJxii15DDmqC6zYaQ-RoCDVwQAvD_BwE" target="_blank">Study Material | </a>
-				 <a href="https://www.comptia.org/landing/certificationsecurityplus/index.html?gclid=CjwKCAjwzOqKBhAWEiwArQGwaE7IIWxafunBcR2kz1xHNq6zTq662lGRgInjJxii15DDmqC6zYaQ-RoCDVwQAvD_BwE" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://www.comptia.org/landing/certificationsecurityplus/index.html?gclid=CjwKCAjwzOqKBhAWEiwArQGwaE7IIWxafunBcR2kz1xHNq6zTq662lGRgInjJxii15DDmqC6zYaQ-RoCDVwQAvD_BwE" target="_blank">Study Material </a>
+		
 
 			 </div>
 	 	  <div class="certs">
@@ -260,12 +261,11 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="source">Cost: $165 <br>
 				 <p class="description">Description: "Become an Azure security expert.
 					The Azure Security Engineer Associate Certification will give you the skills to implement Azure security controls and threat protection to protect data, applications, and networks.
-					To obtain the Azure Security Engineer Associate Certification, you must be able to manage identity and access, implement platform protection, manage security operations, and secure data and applications.
-					" </p>
+					To obtain the Azure Security Engineer Associate Certification, you must be able to manage identity and access, implement platform protection, manage security operations, and secure data and applications." </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer/" target="_blank">Study Material | </a>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/exams/az-500" target="_blank">Exam: AZ-500</a>
+				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-security-engineer/" target="_blank">Study Material </a>
+			
 
 			 </div>
 
@@ -274,33 +274,30 @@ $userId = $_SESSION['UserData']['UserId'];
 	<p id="categoryTitle" ><a id="bottom5"><u>Data Administation Certifications</u></a></p>
 			 <div class="certs">
 				 <p class="title">Comptia CySA+</p>
-				 <p class="source">Timeline: Self Paced | Cost: $549 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $549 <br>
 				 <p class="description">Description: The Comptia CySA+ certification shows that you are able to protect aginst cyber security threats from analyzing networks and devices by critical insight gained from analyzeing behavior.</p>
 				 <a href="https://www.comptia.org/landing/cysaplus/index.html?utm_compid=cpc-google-paid_search_certs-CySa%2B-text_ad-na-cysa%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaPysmIxy1yNoT46EY5OeezzyNPl7O2CB8L9yGs-Q1cQ25XaMQV0HhBoCFqwQAvD_BwE" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://www.comptia.org/landing/cysaplus/index.html?utm_compid=cpc-google-paid_search_certs-CySa%2B-text_ad-na-cysa%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaPysmIxy1yNoT46EY5OeezzyNPl7O2CB8L9yGs-Q1cQ25XaMQV0HhBoCFqwQAvD_BwE" target="_blank">Study Material | </a>
-				 <a href="https://www.comptia.org/landing/cysaplus/index.html?utm_compid=cpc-google-paid_search_certs-CySa%2B-text_ad-na-cysa%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaPysmIxy1yNoT46EY5OeezzyNPl7O2CB8L9yGs-Q1cQ25XaMQV0HhBoCFqwQAvD_BwE" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://www.comptia.org/landing/cysaplus/index.html?utm_compid=cpc-google-paid_search_certs-CySa%2B-text_ad-na-cysa%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaPysmIxy1yNoT46EY5OeezzyNPl7O2CB8L9yGs-Q1cQ25XaMQV0HhBoCFqwQAvD_BwE" target="_blank">Study Material </a>
 
 			 </div>
 <div class="certs">
 				 <p class="title">Comptia CASP+</p>
-				 <p class="source">Timeline: | Cost: $ <br>
-				 <p class="description">Description: "For those who prefer the technological aspects of the IT field rather than management, the CompTIA Advanced Security Practitioner certification is a great solution. These certifications, paired with our Career Services team, will put you on a course for your dream career in information technology.
-"</p>
+				 <p class="source">Cost: $466 <br>
+				 <p class="description">Description: "For those who prefer the technological aspects of the IT field rather than management, the CompTIA Advanced Security Practitioner certification is a great solution. These certifications, paired with our Career Services team, will put you on a course for your dream career in information technology."</p>
 				 <a href="https://www.mycomputercareer.edu/program/it-certifications/comptia/?gclid=Cj0KCQjwnJaKBhDgARIsAHmvz6ewesbc3686p1aPCR4PSy8GFaSMX83s-3cbmSqYInh06oC8ngbYaI0aAv6bEALw_wcB" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://www.mycomputercareer.edu/program/it-certifications/comptia/?gclid=Cj0KCQjwnJaKBhDgARIsAHmvz6ewesbc3686p1aPCR4PSy8GFaSMX83s-3cbmSqYInh06oC8ngbYaI0aAv6bEALw_wcB" target="_blank">Study Material | </a>
+				 <a class="padLinks" href="https://www.comptia.org/faq/casp/how-much-does-the-casp-certification-cost" target="_blank">Study Material | </a>
 				 <a href="https://www.mycomputercareer.edu/program/it-certifications/comptia/?gclid=Cj0KCQjwnJaKBhDgARIsAHmvz6ewesbc3686p1aPCR4PSy8GFaSMX83s-3cbmSqYInh06oC8ngbYaI0aAv6bEALw_wcB" target="_blank">Exam</a>
 
 			 </div>
 <div class="certs">
 				 <p class="title">Microsoft Certified: Azure Administrator Associate</p>
-				 <p class="source">Timeline: | Cost: $165 <br>
+				 <p class="source">Cost: $165 <br>
 				 <p class="description">Description: This certification seeks to prepare professional who use or wish to learn how to use the Microsoft Azure Environment. </p>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/#certification-exam-disclaimers" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/#certification-exam-disclaimers" target="_blank">Study Material | </a>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/#certification-exam-disclaimers" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/" target="_blank">Study Material </a>
 
 			 </div>
 
@@ -326,7 +323,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="description">Description: "Candidates for the Azure Data Scientist Associate certification should have subject matter expertise applying data science and machine learning to implement and run machine learning workloads on Azure. Responsibilities for this role include planning and creating a suitable working environment for data science workloads on Azure. You run data experiments and train predictive models. In addition, you manage, optimize, and deploy machine learning models into production. A candidate for this certification should have knowledge and experience in data science and using Azure Machine Learning and Azure Databricks." </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-data-scientist/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class = "examLink" href="https://docs.microsoft.com/en-us/learn/certifications/azure-data-scientist/" target="_blank">Exam</a>
+				 <a class = "examLink" href="https://docs.microsoft.com/en-us/learn/certifications/azure-data-scientist/#certification-exams" target="_blank">Exam</a>
 
 			 </div>
 
@@ -338,10 +335,9 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="title">Exam AZ-204: Developing Solutions for Microsoft Azure</p>
 				 <p class="source">Cost: $165 <br>
 				 <p class="description">Description: This exam measures your ability to accomplish the following technical tasks: develop Azure compute solutions; develop for Azure storage; implement Azure security; monitor, troubleshoot, and optimize Azure solutions; and connect to and consume Azure services and third-party services. Test takers will be able to select the code language (C# or Python) that is included in the questions when they launch the exam if the exam is taken through Person VUE. However, this option is not available on exams taken through PSI. Those questions will contain C# code.</p>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-developer/#certification-exam-disclaimers" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-developer/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-developer/#certification-exam-disclaimers" target="_blank">Study Material | </a>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-developer/#certification-exam-disclaimers" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-developer" target="_blank">Study Material </a>
 
 			 </div>
 <div class="certs">
@@ -350,8 +346,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="description">Description: Indiviauals with experience in networking, security, disaster recovery, data platforms, and budgeting in Azure should consider obtaining this certification.  </p>
 				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/" target="_blank">Study Material | </a>
-				 <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/" target="_blank">Study Material </a>
 
 			 </div>
 
@@ -360,12 +355,11 @@ $userId = $_SESSION['UserData']['UserId'];
 	<p id="categoryTitle" ><a id="bottom9"><u>Database Certifications</u></a></p>
 			 <div class="certs">
 				 <p class="title">CompTIA Server+</p>
-				 <p class="source">Timeline: Self Paced | Cost: $449 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $449 <br>
 				 <p class="description">Description: This Comptia Server+ certification shows an understanding of servers regarding software, storage, and system best practices that employers look for. </p>
 				 <a href="https://www.comptia.org/landing/serverplus/index.html?utm_compid=cpc-google-paid_search_certs-Server%2B-text_ad-na-server%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaGIXpLTJy_oxNj_QhHDu6I3mIG3sIBGvFRmOidcvKRbg4NahNm5qaxoC44QQAvD_BwE" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://www.comptia.org/landing/serverplus/index.html?utm_compid=cpc-google-paid_search_certs-Server%2B-text_ad-na-server%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaGIXpLTJy_oxNj_QhHDu6I3mIG3sIBGvFRmOidcvKRbg4NahNm5qaxoC44QQAvD_BwE" target="_blank">Study Material | </a>
-				 <a href="https://www.comptia.org/landing/serverplus/index.html?utm_compid=cpc-google-paid_search_certs-Server%2B-text_ad-na-server%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaGIXpLTJy_oxNj_QhHDu6I3mIG3sIBGvFRmOidcvKRbg4NahNm5qaxoC44QQAvD_BwE" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://www.comptia.org/landing/serverplus/index.html?utm_compid=cpc-google-paid_search_certs-Server%2B-text_ad-na-server%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaGIXpLTJy_oxNj_QhHDu6I3mIG3sIBGvFRmOidcvKRbg4NahNm5qaxoC44QQAvD_BwE" target="_blank">Study Material </a>
 
 			 </div>
 
@@ -374,7 +368,7 @@ $userId = $_SESSION['UserData']['UserId'];
 	<p id="categoryTitle" ><a id="bottom10"><u>Development Certifications</u></a></p>
 			 <div class="certs">
 				 <p class="title">Google UX Design Certificate</p>
-				 <p class="source">Timeline: Self Paced | Cost: $$39/month <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $39/month <br>
 				 <p class="description">Description: With no prior experience necessary, this completely online curriculum will provide you with the skills you need for an entry-level position in UX design.</p>
 				 <a href="https://grow.google/uxdesign/#?modal_active=none" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
@@ -383,7 +377,7 @@ $userId = $_SESSION['UserData']['UserId'];
 			 </div>
 <div class="certs">
 				 <p class="title">Associate Android Developer Certification</p>
-				 <p class="source">Timeline: Self Paced| Cost: $149 exam training free <br>
+				 <p class="source">Timeline: Self-Paced |  Cost: $149 exam training free <br>
 				 <p class="description">Description: Begin your career in mobile app development. No prior programming knowledge is required to learn how to create simple Android apps with our Android Basics in Kotlin course. Then, to demonstrate your developer abilities, take the Associate Android Developer Certification test. </p>
 				 <a href="https://grow.google/androiddev/#?modal_active=none" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
@@ -436,13 +430,12 @@ $userId = $_SESSION['UserData']['UserId'];
 
 	<p id="categoryTitle" ><a id="bottom12"><u>Networking Certifications</u></a></p>
 			 <div class="certs">
-				 <p class="title">CompTIA Network+:</p>
-				 <p class="source">Timeline: Self Paced | Cost: $499 <br>
+				 <p class="title">CompTIA Network+</p>
+				 <p class="source">Timeline: Self-Paced | Cost: $499 <br>
 				 <p class="description">Description: The CompTIA Network+ certification shows skils in designing managing, and securing networks. This certification is required to work at Dell, HP, and Apple</p>
 				 <a href="https://www.comptia.org/landing/networkplus/index.html?utm_compid=cpc-google-paid_search_certs-Network%2B-text_ad-na-network%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFcfCZ5NyWXRaZyAfreIYB_cmpqDoSWNFriWCS_nK31FPnU3IXzPORoCFPUQAvD_BwE" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="https://www.comptia.org/landing/networkplus/index.html?utm_compid=cpc-google-paid_search_certs-Network%2B-text_ad-na-network%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFcfCZ5NyWXRaZyAfreIYB_cmpqDoSWNFriWCS_nK31FPnU3IXzPORoCFPUQAvD_BwE" target="_blank">Study Material | </a>
-				 <a href="https://www.comptia.org/landing/networkplus/index.html?utm_compid=cpc-google-paid_search_certs-Network%2B-text_ad-na-network%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFcfCZ5NyWXRaZyAfreIYB_cmpqDoSWNFriWCS_nK31FPnU3IXzPORoCFPUQAvD_BwE" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://www.comptia.org/landing/networkplus/index.html?utm_compid=cpc-google-paid_search_certs-Network%2B-text_ad-na-network%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFcfCZ5NyWXRaZyAfreIYB_cmpqDoSWNFriWCS_nK31FPnU3IXzPORoCFPUQAvD_BwE" target="_blank">Study Material </a>
 
 			 </div>
 <div class="certs">
@@ -453,10 +446,10 @@ $userId = $_SESSION['UserData']['UserId'];
 				Cisco authorized training is available online and can be completed in multiple short sessions, enabling technicians to stay productive in the field. Cisco Certified Technician (CCT) certification is available in multiple technology tracks, providing an opportunity for Cisco support technicians to expand their area of expertise.
 				 </p>
 
-				 <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/entry/technician-cct.html#~stickynav=5" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+				 <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/entry/technician-cct.html" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
 				 <a class="padLinks" href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/entry/technician-cct.html#~stickynav=5" target="_blank">Study Material | </a>
-					 <a href="" target="_blank">Required exams: 100-890 CLTECH (Valid for 3 years) </a>
+					 <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/exams/current-list/100-890-cltech.html" target="_blank">Required exams: 100-890 CLTECH (Valid for 3 years) </a>
 
 
 			 </div>
@@ -465,10 +458,10 @@ $userId = $_SESSION['UserData']['UserId'];
 				 <p class="description">Description: "The Cisco CCNA Certification will give you the skills to manage many of today’s advanced networks. To obtain the Cisco CCNA Certification, you must be knowledgeable with network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability."
 				 </p>
 
-				 <a href ="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"><i class="fas fa-external-link-alt shareIcon"></i></a>
+				 <a href ="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
 				 <a class="padLinks" href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank">Study Material | </a>
-					 <a href="" target="_blank">Required exams: 200-301 CCNA </a>
+					 <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html#~about-ccna" target="_blank">Required exams: 200-301 CCNA </a>
 
 
 			 </div>
@@ -517,7 +510,7 @@ Professional Certificate</p>
 			 </div>
 <div class="certs">
 				 <p class="title">Google Project Management Certificate</p>
-				 <p class="source">Timeline: Self Paced | Cost: $39/month<br>
+				 <p class="source">Timeline: Self-Paced | Cost: $39/month<br>
 				 <p class="description">Description: With a professional certification designed by Google, you may get started in the high-growth sector of project management. Learn how to manage projects successfully and efficiently using both traditional and agile approaches. </p>
 				 <a href="https://grow.google/projectmanagement/#?modal_active=none" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
@@ -530,12 +523,11 @@ Professional Certificate</p>
 	<p id="categoryTitle" ><a id="bottom15"><u>Tech Support Certifications</u></a></p>
 			 <div class="certs">
 				 <p class="title">Comptia A+ Certification</p>
-				 <p class="source">Timeline: Self Paced | Cost: $349 <br>
+				 <p class="source">Timeline: Self-Paced | Cost: $349 <br>
 				 <p class="description">Description: The Comptia A+ certification shows fundemental understanding of PC, laptop, and moble technology/maintence. This certification is also a requirement for jobs in the department of justice as well as companies Dell, Lenovo, and Intel.</p>
-				 <a href="" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+				 <a href="https://www.comptia.org/landing/aplus/index.html?utm_compid=cpc-google-paid_search_certs-a%2B-a%2B-2021_04_01-a%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFzST7v46uTxMqtjQLHz9D6g_tOK6UgXUV4HnO3DQ8WwxeBnPhRj7hoCyI4QAvD_BwE" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 					 <i class="far fa-heart heartIcon"></i>
-				 <a class="padLinks" href="" target="_blank">Study Material | </a>
-				 <a href="" target="_blank">Exam</a>
+				 <a class="padLinks" href="https://www.comptia.org/landing/aplus/index.html?utm_compid=cpc-google-paid_search_certs-a%2B-a%2B-2021_04_01-a%2B-B2C&gclid=CjwKCAjwzOqKBhAWEiwArQGwaFzST7v46uTxMqtjQLHz9D6g_tOK6UgXUV4HnO3DQ8WwxeBnPhRj7hoCyI4QAvD_BwE" target="_blank">Study Material </a>
 
 			 </div>
 <div class="certs">

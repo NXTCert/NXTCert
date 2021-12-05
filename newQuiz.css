@@ -99,15 +99,29 @@ label input {
     height: 25px;
     width: 25px;
     position: absolute;
-    border-radius: 50%;
+	border-radius: 50%;
     background-color: lightgrey;
 }
-
+.selectCheck {
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background-color: lightgrey;
+}
 label:hover input~.select {
     background-color: #31B7f4;
 }
 
 label input:checked~.select {
+    background-color: #31B7F4;
+}
+label:hover input~.selectCheck {
+    background-color: #31B7f4;
+}
+
+label input:checked~.selectCheck {
     background-color: #31B7F4;
 }
 
@@ -116,11 +130,20 @@ label input:checked~.select {
     position: absolute;
     display: none;
 }
+.selectCheck:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
 
 label input:checked~.select:after {
     display: block;
 }
-
+label input:checked~.selectCheck:after {
+    display: block;
+}
+/*for the small circle in the middle*/
 label .select:after {
     top: 9px;
     left: 9px;
@@ -129,13 +152,19 @@ label .select:after {
     border-radius: 35%;
     background: white;
 }
-
+label .selectCheck:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    background: white;
+}
 .titleQuestion{
 	text-align: left;
 }
 
 .holdSubmitRight{
-	padding-left: 400px;
+padding-left: 38%;
 	
 
 }
@@ -158,11 +187,10 @@ input[type=button], input[type=submit], input[type=reset] {
 input[type=text] {
   background-color: #31B7F4;
   background: transparent;
-	margin-left:
   padding-left: 40px;
   border: none;
   border-bottom: 1px solid #000000;
 }
 input[type=text]:focus {
-background: linear-gradient(to right, #AED6f1, #31B7F4);s
+background: linear-gradient(to right, #AED6f1, #31B7F4);
 }
