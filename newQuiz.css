@@ -187,11 +187,10 @@ input[type=button], input[type=submit], input[type=reset] {
 input[type=text] {
   background-color: #31B7F4;
   background: transparent;
-	margin-left:
   padding-left: 40px;
   border: none;
   border-bottom: 1px solid #000000;
 }
 input[type=text]:focus {
-background: linear-gradient(to right, #AED6f1, #31B7F4);s
+background: linear-gradient(to right, #AED6f1, #31B7F4);
 }
