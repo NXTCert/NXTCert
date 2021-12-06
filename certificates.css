@@ -22,6 +22,7 @@
 
 }
 
+
 #quizButton{
     color:white;
     border: 1px solid#31B7F4;
@@ -33,6 +34,8 @@
     font-weight: 300;
     font-size: .75em;
     background-color: #31B7F4;
+    left: 50%;
+    position: relative;
 
 }
 #quizButton > a{
@@ -46,7 +49,7 @@
 }
 .certs{
     position: relative;
-    margin: 0 100px;
+    
     width: 800px;
     height: auto;
     background-color: white;
@@ -58,14 +61,15 @@
 	font-family: Helvetica, sans-serif;
     font-weight: 300;
     min-width: 500px;
-    margin: 30px 100px 15px;
+    margin: 15px auto;
 	
+}
+
+.titleContainer{
+    margin: 5px auto;
 }
 .title{
     font-weight: 600;
-    margin: 0px 0px 10px 20px;
-	 
-
 }
 p {
     text-align: left;

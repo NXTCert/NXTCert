@@ -40,9 +40,10 @@ $userId = $_SESSION['UserData']['UserId'];
     <div id="nav-placeholder">
 
     </div>
-<!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
-    <p id="certTitle"> Your Recommended Certifications &nbsp;&nbsp;<i id="bars" class="fas fa-bars barsIcon"></i></p>
 
+<!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
+	
+	<div class="titleContainer"><p id="certTitle"> Your Recommended Certifications</p></div>
 	<?php 
 	function isFav(&$certId, $db) {
 		$userId = $_SESSION['UserData']['UserId'];
@@ -626,7 +627,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
 		<!-- ------------ DevOps --------------- -->
 	<p id="categoryTitle" ><a id="bottom11"><u>DevOps Certifications</u></a></p>
 		
@@ -817,7 +818,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				?>
 
  				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
-
+		
     <!-- keep at bottom -->
     <script>
         $(function(){
