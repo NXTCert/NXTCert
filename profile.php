@@ -100,7 +100,7 @@ if ($result->num_rows > 0) {
 						<p class="description">Description: <?php echo $description; ?> </p>						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="delete.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank" id="plusIcon"><i class="fas fa-plus"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" target="_blank" class="plusIcon"><i class="fas fa-plus"></i></a>
 	
 						</div>
 	
