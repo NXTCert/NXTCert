@@ -172,12 +172,10 @@ $userId = $_SESSION['UserData']['UserId'];
 		  -->
 <!-- START of listing the certs - Chelsey -->
  
-		 <p id="searchTitle" ><a id="browseancor"><u id="test">Browse Certifications by Category</u></a></p>
-		 
-
-	
-
-		<table class="browseCertsBox">
+		 <div class="fixBrowseBoarder">
+<table class="browseCertsBox">
+		<!--<th style="color: white; text-align: center;">Browse by Certification</th> -->
+		<th colspan="3" class="moveTitleCenter">Browse Certifications by Category </th>
 		  <tr>
 			<td ><a id="top1" href ="#bottom1">AI Engineering</a></td>
 			<td ><a id="top6" href ="#bottom6">Data Engineering</a></td>
@@ -205,7 +203,7 @@ $userId = $_SESSION['UserData']['UserId'];
 		  </tr>
 
 		</table> 
-
+	 </div>
 		<!-- fa fa-heart -->
 		<!-- <i class="fas fa-plus"></i> -->
 	 
