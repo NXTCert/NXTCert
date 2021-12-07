@@ -52,6 +52,7 @@
     background-color: white;
     border: solid 1px darkgray;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	align-content: center;
 
     border-radius: 25px;
     padding: 10px;
