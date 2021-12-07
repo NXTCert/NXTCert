@@ -171,9 +171,9 @@ $userId = $_SESSION['UserData']['UserId'];
 		  -->
 <!-- START of listing the certs - Chelsey -->
  
-		 <p id="searchTitle" ><a id="browseancor"><u id="test">Browse Certifications by Category</u></a></p>
+		 <p id="searchTitle" ><a id="browseancor">Browse Certifications by Category</a></p>
 		 
-     </div>
+  
 	
 
 		<table class="browseCertsBox">
