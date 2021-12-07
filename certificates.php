@@ -175,7 +175,7 @@ $userId = $_SESSION['UserData']['UserId'];
 		 <div class="fixBrowseBoarder">
 <table class="browseCertsBox">
 		<!--<th style="color: white; text-align: center;">Browse by Certification</th> -->
-		<th colspan="3" class="moveTitleCenter">Browse Certifications by Category </th>
+		<th colspan="3" class="moveTitleCenter" id="browseancor">Browse Certifications by Category </th>
 		  <tr>
 			<td ><a id="top1" href ="#bottom1">AI Engineering</a></td>
 			<td ><a id="top6" href ="#bottom6">Data Engineering</a></td>
