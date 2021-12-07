@@ -241,7 +241,7 @@ padding-top: 10px;
 }
 
 #error3 {
-    color: white;
+    color: red;
 }
 .errorMsg {
     color: red;
