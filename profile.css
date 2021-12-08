@@ -31,6 +31,9 @@ body{
     font-size: 12px;
   }
 }
+select{
+  margin: 0 15px;
+}
 
 .stepper-item::before {
   position: absolute;
