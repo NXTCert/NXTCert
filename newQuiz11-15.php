@@ -43,7 +43,7 @@ $userId = $_SESSION['UserData']['UserId'];
 	<div class="whyQuizDiv"> 
 	
 	<p>The purpose of the quiz is to match you with certifications. You will be asked questions about your experience, desired careers, and desired roles. After you submit the quiz our algorithm will match you with certifications that fit your preferences. You can view your custom certifications list in your profile after you complete your quiz. <br>
-You can also add and keep track of your certifications by browsing our full list of certifications on the certifications page. 
+You can also add and keep track of your certifications by browsing our full list of certifications on the certifications page. </p>
 	</div>
 	 <div class="button-box">
 			
