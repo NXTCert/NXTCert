@@ -17,7 +17,8 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <style>
@@ -59,7 +60,7 @@ session_start();
                 </form>
             </div> -->
             <div id="registerFormContainer">
-                <form action="login.php" method="post">
+                <form id='demo-form' action="login.php" method="post">
 
                 <p class="errorMsg" id="error1">
                     <?PHP
@@ -91,7 +92,7 @@ session_start();
                         
                     </div>
                         <p class="errorMsg" id="error3"> </p>
-                        <button type="submit"  id= "register" name="register" class="btn btn-primary">Register</button>
+                        <button type="submit"  id= "register" name="register" class="g-recaptcha btn btn-primary" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-callback='onSubmit'>Register</button>
 
 
                 </form>
