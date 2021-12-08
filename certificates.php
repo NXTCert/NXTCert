@@ -178,7 +178,7 @@ $userId = $_SESSION['UserData']['UserId'];
 <!-- START of listing the certs - Chelsey -->
  
 		 <div class="fixBrowseBoarder">
-<table class="browseCertsBox">
+<table class="browseCertsBox" id="browseanchor">
 		<!--<th style="color: white; text-align: center;">Browse by Certification</th> -->
 		<th colspan="3" class="moveTitleCenter" id="browseanchor">Browse Certifications by Category </th>
 		  <tr>
@@ -258,7 +258,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 
-	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 
 
@@ -305,7 +305,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 
-	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="browseancor">Back to the top</a></p>
 
 
 
