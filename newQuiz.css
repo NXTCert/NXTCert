@@ -8,6 +8,7 @@
     display: none;
 }
 
+
 .whyQuizDiv{
 	padding-top: 45px;
 	padding-bottom: 20px;
@@ -25,10 +26,10 @@ p{
 
 .whyTitle{
 	font-size: 70px;
-	
-
 
 }
+
+
 .container {
     display: block;
     max-width: 60%;
