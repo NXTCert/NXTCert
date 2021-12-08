@@ -10,11 +10,12 @@
 
 
 .whyQuizDiv{
-	padding-top: 45px;
+
 	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
+	padding-top: 45px;
 }
 
 p{
