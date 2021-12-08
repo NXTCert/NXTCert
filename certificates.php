@@ -130,7 +130,7 @@ $userId = $_SESSION['UserData']['UserId'];
 			 
 						?>
 	
-						<div class="certs">
+						<div class="certs" id="rec<?php echo $id; ?>">
 						<p class="title"><?php echo $title; ?></p>
 						<p class="source">Cost: $<?php echo $cost; ?>  <br>
 						<p class="description">Description: <?php echo $description; ?> </p>
@@ -176,7 +176,7 @@ $userId = $_SESSION['UserData']['UserId'];
 		 <div class="fixBrowseBoarder">
 <table class="browseCertsBox">
 		<!--<th style="color: white; text-align: center;">Browse by Certification</th> -->
-		<th colspan="3" class="moveTitleCenter" id="browseancor">Browse Certifications by Category </th>
+		<th colspan="3" class="moveTitleCenter" id="browseanchor">Browse Certifications by Category </th>
 		  <tr>
 			<td ><a id="top1" href ="#bottom1">AI Engineering</a></td>
 			<td ><a id="top6" href ="#bottom6">Data Engineering</a></td>
@@ -228,7 +228,7 @@ $userId = $_SESSION['UserData']['UserId'];
 			 
 						?>
 	
-						<div class="certs">
+						<div class="certs" id="<?php echo $id; ?>">
 						<p class="title"><?php echo $title; ?></p>
 						<p class="source">Cost: $<?php echo $cost; ?>  <br>
 						<p class="description">Description: <?php echo $description; ?> </p>
@@ -325,7 +325,7 @@ $userId = $_SESSION['UserData']['UserId'];
 			 
 						?>
 	
-						<div class="certs">
+						<div class="certs" id="<?php echo $id; ?>">
 						<p class="title"><?php echo $title; ?></p>
 						<p class="source">Cost: $<?php echo $cost; ?>  <br>
 						<p class="description">Description: <?php echo $description; ?> </p>
@@ -365,7 +365,7 @@ $userId = $_SESSION['UserData']['UserId'];
 			 
 						?>
 	
-						<div class="certs">
+						<div class="certs" id="<?php echo $id; ?>">
 						<p class="title"><?php echo $title; ?></p>
 						<p class="source">Cost: $<?php echo $cost; ?>  <br>
 						<p class="description">Description: <?php echo $description; ?> </p>

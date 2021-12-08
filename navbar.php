@@ -11,16 +11,16 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home<span class="sr-only"></span></a>
+                    <a class="nav-link" id ="homeTab" href="/index.html">Home<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/certificates.php">Certificates</a>
+                    <a class="nav-link" id="certTab" href="/certificates.php">Certificates</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/careers.html">Careers</a>
+                    <a class="nav-link" id="careerTab" href="/careers.html">Careers</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="/about.html">About</a>
+                    <a class="nav-link " id="aboutTab" href="/about.html">About</a>
                 </li>
             </ul>
 
@@ -29,14 +29,14 @@ session_start();
                 if(!isset($_SESSION['UserData']['UserId'])){
             ?>
                 <li class="nav-item navbar-right">
-                    <a class="nav-link" href="/loginForm.php">Login</a>
+                    <a class="nav-link" id="loginTab" href="/loginForm.php">Login</a>
                 </li>
             <?php
                 }
                 else{
             ?>
                 <li class="nav-item navbar-right">
-                    <a class="nav-link" href="/profile.php">Profile</a>
+                    <a class="nav-link" id="profileTab" href="/profile.php">Profile</a>
                 </li>
             <?php 
                 }

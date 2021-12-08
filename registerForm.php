@@ -69,7 +69,7 @@ session_start();
                 </p>
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="" name="username" class="form-control" placeholder="Username" id="name" required>
+                        <input type="" name="username" class="form-control" maxlength="30" placeholder="Username" id="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email address:</label>

@@ -8,6 +8,7 @@ if(!isset($_SESSION['UserData']['UserId'])){
 }else{
     $userId = $_SESSION['UserData']['UserId'];
     $certId = $_GET['id'];
+    $Username = isset($_POST['username']) ? $_POST['username'] : '';
 
     $sql = "SELECT * FROM certsInProgress WHERE userID = '".$userId."' AND  certId = ".$certId."";
     $result = $db->query($sql);

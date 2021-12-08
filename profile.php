@@ -160,12 +160,22 @@ if ($result->num_rows > 0) {
         <details>
             <summary>Edit Profile</summary>
             <form action="editProfile.php" method="post">
-                    <label for="uname"><b>Name</b></label>
-                    <input type="text" placeholder="Enter New Name" name="username" >
+                    <label for="username"><b>Name</b></label>
+                    <input type="text" placeholder="Enter New Name" name="username" maxlength="30">
 
-                    <label for="psw"><b>Email</b></label>
-                    <input type="password" placeholder="Enter New Email" name="email" >
-
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter New Email" name="email" >
+                    <p class="errorMsg">
+                    <?PHP
+                        if( isset($_SESSION['Error']) )
+                        {
+                                echo $_SESSION['Error'];
+                        
+                                unset($_SESSION['Error']);
+                        
+                        }
+                    ?>
+                </p>
                     <button type="submit">Save</button>
        
                 </form>
