@@ -19,6 +19,12 @@ session_start();
  
      <link rel="stylesheet" href="main.css">
 
+     <style>
+         #loginTab{
+             color: white;
+         }
+     </style>
+
  </head>
  <body>
      <!-- keep at top -->

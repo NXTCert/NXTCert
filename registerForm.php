@@ -20,6 +20,11 @@ session_start();
  
     <link rel="stylesheet" type="text/css" href="main.css">
 
+    <style>
+         #loginTab{
+             color: white;
+         }
+     </style>
 
  </head>
  <body>

@@ -31,7 +31,11 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 	</script>
-
+	     <style>
+         #certTab{
+             color: white;
+         }
+     </style>
 
 
  </head>
@@ -821,6 +825,7 @@ $userId = $_SESSION['UserData']['UserId'];
     <script>
         $(function(){
         $("#nav-placeholder").load("navbar.php");
+		$("#certTab").css({ 'color': 'red', 'font-size': '150%' });
         });
     </script>
 

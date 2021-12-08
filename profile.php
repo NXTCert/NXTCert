@@ -54,6 +54,12 @@ if ($result->num_rows > 0) {
      <link rel="stylesheet" href="profile.css">
      <link rel="stylesheet" href="certificates.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+         #profileTab{
+             color: white;
+         }
+     </style>
  </head>
  <body>
      <!-- keep at top -->
@@ -186,6 +192,7 @@ if ($result->num_rows > 0) {
     <script>
         $(function(){
         $("#nav-placeholder").load("navbar.php");
+        $("#profileTab").css("color", "white");
         });
     </script>
 
