@@ -303,7 +303,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 
-	<p class="goBackToMenu"><a  href ="browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 
 
@@ -346,7 +346,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				?>
 
 
-	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<!-- ------------ Cyber --------------- -->	
 	<p id="categoryTitle" ><a id="bottom4"><u>Cyber Security Certifications</u></a></p>
@@ -388,7 +388,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 
-	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 
 
@@ -430,7 +430,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				?>
 
 
-	 <p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 <p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<!-- ------------ Data Engineering --------------- -->
 	<p id="categoryTitle" ><a id="bottom6"><u>Data Engineering Certifications</u></a></p>
@@ -471,7 +471,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 
 
-	<p class="goBackToMenu"><a href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a href ="#browseanchor">Back to the top</a></p>
 
 
 
@@ -512,7 +512,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	 <p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 <p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<!-- ------------ Data Solutions --------------- -->
 	<p id="categoryTitle" ><a id="bottom8"><u>Data Solutions Certifications</u></a></p>
@@ -551,7 +551,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 		<!-- ------------ Database --------------- -->
 	<p id="categoryTitle" ><a id="bottom9"><u>Database Certifications</u></a></p>
 	
@@ -589,7 +589,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 		<!-- ------------ Development --------------- -->
 	<p id="categoryTitle" ><a id="bottom10"><u>Development Certifications</u></a></p>
 	
@@ -627,7 +627,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 		<!-- ------------ DevOps --------------- -->
 	<p id="categoryTitle" ><a id="bottom11"><u>DevOps Certifications</u></a></p>
 		
@@ -665,7 +665,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<p id="categoryTitle" ><a id="bottom12"><u>Networking Certifications</u></a></p>
 		
@@ -703,7 +703,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<p id="categoryTitle" ><a id="bottom13"><u>Programming Certifications</u></a></p>
 
@@ -741,7 +741,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 		
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<p id="categoryTitle" ><a id="bottom14"><u>Project Management Certifications</u></a></p> 
 	 
@@ -780,7 +780,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				?>
 		
 
-	 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+	 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 
 	<p id="categoryTitle" ><a id="bottom15"><u>Tech Support Certifications</u></a></p>
 	<?php
@@ -817,7 +817,7 @@ $userId = $_SESSION['UserData']['UserId'];
 				}
 				?>
 
- 				<p class="goBackToMenu"><a  href ="#browseancor">Back to the top</a></p>
+ 				<p class="goBackToMenu"><a  href ="#browseanchor">Back to the top</a></p>
 		
     <!-- keep at bottom -->
     <script>
