@@ -45,33 +45,44 @@ if(isset($_POST['submit'])){
         header('location:loginForm.php');
     }
 }
+ 
+if(isset($_POST['g-recaptcha-response'] && !empty($_POST['g-recaptcha-response'])){
+    // Get verify response data
+    $secretKey  = "6LfcIY0dAAAAAF5jqJYQ8Qc6MaEtNLUCCqlsScjp";
+    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+    $responseData = json_decode($verifyResponse);
+    if($responseData->success){
+        if(isset($_POST['register'])){
+        $UserId = isset($_POST['email']) ? $_POST['email'] : '';
+        $Username = isset($_POST['username']) ? $_POST['username'] : '';
+        $Password = isset($_POST['password']) ? $_POST['password'] : '';
+
+        $sql = "SELECT UserId FROM users WHERE UserID = '".$UserId."'";
+        $result = $db->query($sql);
 
 
+        if ($result->num_rows > 0){
+            echo $UserId;
+            $_SESSION['Error'] = "This email is already in use";
+            header("Location: registerForm.php");
 
-if(isset($_POST['register'])){
-    $UserId = isset($_POST['email']) ? $_POST['email'] : '';
-    $Username = isset($_POST['username']) ? $_POST['username'] : '';
-    $Password = isset($_POST['password']) ? $_POST['password'] : '';
+            exit;
 
-    $sql = "SELECT UserId FROM users WHERE UserID = '".$UserId."'";
-    $result = $db->query($sql);
-
-
-    if ($result->num_rows > 0){
-        echo $UserId;
-        $_SESSION['Error'] = "This email is already in use";
-        header("location:registerForm.php");
-      
-        exit;
-
-    } else {
-        $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
-        $result = $db->query($addUser);
-        echo "logging in";
-        header("location:profile.php");
-        $_SESSION['UserData']['UserId']=$UserId;
-        exit;
+        } else {
+            $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
+            $result = $db->query($addUser);
+            echo "logging in";
+            header("location:profile.php");
+            $_SESSION['UserData']['UserId']=$UserId;
+            exit;
+            }
         }
+    }
+    else {
+        echo 'captcha failed';
+    }
+
 }
+ 
 
 ?>
