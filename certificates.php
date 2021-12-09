@@ -10,7 +10,7 @@ $userId = $_SESSION['UserData']['UserId'];
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <meta charset="utf-8">
+ 	<meta charset="UTF-8" name="viewport" content="width=device-width">
     <title>Certificates</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -45,7 +45,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
     </div>
 
-<!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
+
 	
 	<?php 
 	function isFav(&$certId, $db) {
@@ -81,6 +81,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 		if(!isset($_SESSION['UserData']['UserId'])){
 	?>
+		<button id="quizButton"> <a href='loginForm.php'>Login to take the quiz</a></button>
 	<?php
 		}
 		else{
@@ -89,65 +90,13 @@ $userId = $_SESSION['UserData']['UserId'];
 
 			if ($result->num_rows > 0) {
 
-
-				$budgetQuery = "SELECT budgetId from userBudgets where userid = '".$userId."'";
-				$budget = $db->query($budgetQuery);
-				while($row = $budget->fetch_assoc()) {
-					$userBudget = $row["budgetId"];             
-				 }
-
-
-
-				$sql = "SELECT experienceId from userExperience where userid = '".$userId."'";
-				$experience = $db->query($sql);
-				while($row = $experience->fetch_assoc()) {
-					$userExperience = $row["experienceId"]; 
-					           
-				 }
-
-
-				$userIndustryArray = array();
-				$sql = "SELECT industryid FROM userIndustries WHERE UserID = '".$userId."'";
-				$industries = $db->query($sql);
-				while($row = $industries->fetch_assoc()) {
-					$userind = $row["industryid"]; 
-					array_push($userIndustryArray,$userind);           
-				 }
-				// print_r($userIndustryArray);
-				$implodedArrary = implode($userIndustryArray, ',');
-
-
-				$sql = "SELECT * FROM certs WHERE experienceid = '".$userExperience."' AND budgetid <= '".$userBudget."' AND industryid in (".$implodedArrary.")";
-				$certs = $db->query($sql);
-				$rowcount = mysqli_num_rows($certs);
-				// printf("Result set has %d rows.\n",$rowcount);
+				?>
+				<button id="quizButton"> <a href='profile.php'>View Your Recommended Certifications</a></button>
 				
-				if ($rowcount > 0){
-					while($row = $certs->fetch_assoc()) {
-						$title = $row["title"];
-						$description = $row["description"];
-						$cost = $row["cost"];
-						$url = $row["url"];
-						$id = $row["certId"];
-			 
-						?>
-	
-						<div class="certs" id="rec<?php echo $id; ?>">
-						<p class="title"><?php echo $title; ?></p>
-						<p class="source">Cost: $<?php echo $cost; ?>  <br>
-						<p class="description">Description: <?php echo $description; ?> </p>
-						
-						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
-							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
-	
-						</div>
+		
 	
 						<?php
-					 }
-				} else{
-					echo "No certification matching your criteria, please browse certs by industry below.";
-				}
+
 
 				
 

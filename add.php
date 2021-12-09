@@ -24,7 +24,7 @@ if(!isset($_SESSION['UserData']['UserId'])){
        
     }
 
-    header('location:certificates.php');
+    header('location:profile.php');
 }
 
 ?>
