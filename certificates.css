@@ -56,8 +56,8 @@
 }
 .certs{
     position: relative;
-    
-    width: 800px;
+
+    width: 80%;
     height: auto;
     background-color: white;
     border: solid 1px darkgray;
@@ -68,7 +68,7 @@
     padding: 10px;
 	font-family: Helvetica, sans-serif;
     font-weight: 300;
-    min-width: 500px;
+    /* min-width: 400px; */
     margin: 15px auto;
 	
 }
@@ -78,6 +78,7 @@
 }
 .title{
     font-weight: 600;
+    width: 75%;
 }
 p {
     text-align: left;

@@ -1,16 +1,14 @@
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }
+
 
 
 body{
-    background-color: #e7e4e4;
-    font-family: Helvetica, sans-serif;
-    font-weight: 300;
-    min-width: 500px;
-}
+        background-color: #e7e4e4;
+        font-family: Helvetica, sans-serif;
+        font-weight: 300;
+        min-width: 500px;
+    }
+    
+  
 
 .navbar{
     font-family: Helvetica, sans-serif;
@@ -76,7 +74,7 @@ body{
     width: 225px;
     height: 300px;
     padding: 18px;
-    margin: 10px 20px;
+    margin: 10px;
     /* border: 1px solid grey; */
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     border-radius: 25px;
@@ -167,6 +165,29 @@ body{
     background-color: transparent;
 }
 
+@media only screen and (max-width: 700px) {
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 120%;
+    }
+
+    .card{
+        width: 225px;
+        height: 300px;
+        margin: 5px;
+    
+    }
+
+    #bannerText{
+        font-size: 100%;
+        top: 15%;
+    }
+
+
+
+
+  }
 
 /*TICKETS and ISSUES
  - the logo needs to take you back to the home page 

@@ -27,9 +27,7 @@ body{
   align-items: center;
   flex: 1;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
+
 }
 select{
   margin: 0 15px;
@@ -183,4 +181,18 @@ body{
 
 .logoImg{
     width: 200px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+      font-family: Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 120%;
+      min-width: 500px;
+  }
+
+ 
+
+
+
 }

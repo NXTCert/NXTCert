@@ -8,7 +8,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <meta charset="utf-8">
+ <meta charset="UTF-8" name="viewport" content="width=device-width">
     <title>Login</title>
 
 
