@@ -47,7 +47,6 @@ $userId = $_SESSION['UserData']['UserId'];
 
 <!-- start of certs showing dynamiocally if the person is logged in - Chelsey --> 
 	
-	<div class="titleContainer"><p id="certTitle"> Your Recommended Certifications</p></div>
 	<?php 
 	function isFav(&$certId, $db) {
 		$userId = $_SESSION['UserData']['UserId'];
@@ -82,7 +81,6 @@ $userId = $_SESSION['UserData']['UserId'];
 
 		if(!isset($_SESSION['UserData']['UserId'])){
 	?>
-		<button id="quizButton"> <a href='loginForm.php'>Login to Take the Quiz</a></button>
 	<?php
 		}
 		else{
