@@ -83,82 +83,7 @@ if ($result->num_rows > 0) {
             <p class="email"><?php echo $userEmail; ?></p>
         </div>
          
-        <details class="favorite">
-            <summary>Favorites</summary>
-        
-            <?php 
-            $sql = "SELECT certs.certId, favorites.userId, certs.title, certs.url, certs.description, certs.cost FROM certs INNER JOIN favorites ON favorites.certId=certs.certID WHERE favorites.userId = '".$userEmail."';";
-				$certs = $db->query($sql);
-				$rowcount = mysqli_num_rows($certs);
-				// printf("Result set has %d rows.\n",$rowcount);
-				
-				if ($rowcount > 0){
-					while($row = $certs->fetch_assoc()) {
-						$title = $row["title"];
-						$url = $row["url"];
-						$id = $row["certId"];
-                        $description = $row["description"];
-						$cost = $row["cost"];
-			 
-						?>
-	
-						<div class="certs">
-						<p class="title"><?php echo $title; ?></p>
-                        <p class="source">Cost: $<?php echo $cost; ?>  <br>
-						<p class="description">Description: <?php echo $description; ?> </p>						
-						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
-							<a href="delete.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank" class="plusIcon"><i class="fas fa-plus"></i></a>
-	
-						</div>
-	
-						<?php
-					 }
-				} else{
-					echo "No favorites yet.";
-				}
-                ?>
-        </details>
-
-        <details>
-            <summary>Certifications In Progress</summary>
-            <?php 
-            $sql = "SELECT certs.certId, certsInProgress.userId, certs.title, certs.url, certs.description, certs.cost FROM certs INNER JOIN certsInProgress ON certsInProgress.certId=certs.certID WHERE certsInProgress.userId = '".$userEmail."';";
-				$certs = $db->query($sql);
-				$rowcount = mysqli_num_rows($certs);
-				// printf("Result set has %d rows.\n",$rowcount);
-				
-				if ($rowcount > 0){
-					while($row = $certs->fetch_assoc()) {
-						$title = $row["title"];
-						$url = $row["url"];
-						$id = $row["certId"];
-    
-			 
-						?>
-	
-						<div class="certs">
-						<p class="title"><?php echo $title; ?></p>
-                        <form action="progressUpdate.php?id=<?php echo $id; ?>" method="post">
-                            <select name="progress" onchange="this.form.submit()">
-                                <option value=0 <?php progress($id, $userEmail, 0, $db); ?> >Signed up</option>
-                                <option value=1 <?php progress($id, $userEmail, 1, $db); ?> >Studying</option>
-                                <option value=2 <?php progress($id, $userEmail, 2, $db); ?> >Take Exam</option>
-                                <option value=3 <?php progress($id, $userEmail, 3, $db); ?> >Passed Exam</option>
-                           </select>
-                            </form>					
-						    <a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
-							<a href="deleteAdd.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
-						</div>
-	
-						<?php
-					 }
-				} else{
-					echo "No favorites yet.";
-				}
-                ?>
-  
-        </details>
+       
 
         <details>
             <summary>Recommended Certifications</summary>
@@ -273,6 +198,82 @@ if ($result->num_rows > 0) {
 	<?php 
 		}
 	?>
+        </details>
+        <details class="favorite">
+            <summary>Favorites</summary>
+        
+            <?php 
+            $sql = "SELECT certs.certId, favorites.userId, certs.title, certs.url, certs.description, certs.cost FROM certs INNER JOIN favorites ON favorites.certId=certs.certID WHERE favorites.userId = '".$userEmail."';";
+				$certs = $db->query($sql);
+				$rowcount = mysqli_num_rows($certs);
+				// printf("Result set has %d rows.\n",$rowcount);
+				
+				if ($rowcount > 0){
+					while($row = $certs->fetch_assoc()) {
+						$title = $row["title"];
+						$url = $row["url"];
+						$id = $row["certId"];
+                        $description = $row["description"];
+						$cost = $row["cost"];
+			 
+						?>
+	
+						<div class="certs">
+						<p class="title"><?php echo $title; ?></p>
+                        <p class="source">Cost: $<?php echo $cost; ?>  <br>
+						<p class="description">Description: <?php echo $description; ?> </p>						
+						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+							<a href="delete.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"  class="plusIcon"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+	
+						</div>
+	
+						<?php
+					 }
+				} else{
+					echo "No favorites yet.";
+				}
+                ?>
+        </details>
+
+        <details>
+            <summary>Certifications In Progress</summary>
+            <?php 
+            $sql = "SELECT certs.certId, certsInProgress.userId, certs.title, certs.url, certs.description, certs.cost FROM certs INNER JOIN certsInProgress ON certsInProgress.certId=certs.certID WHERE certsInProgress.userId = '".$userEmail."';";
+				$certs = $db->query($sql);
+				$rowcount = mysqli_num_rows($certs);
+				// printf("Result set has %d rows.\n",$rowcount);
+				
+				if ($rowcount > 0){
+					while($row = $certs->fetch_assoc()) {
+						$title = $row["title"];
+						$url = $row["url"];
+						$id = $row["certId"];
+    
+			 
+						?>
+	
+						<div class="certs">
+						<p class="title"><?php echo $title; ?></p>
+                        <form action="progressUpdate.php?id=<?php echo $id; ?>" method="post">
+                            <select name="progress" onchange="this.form.submit()">
+                                <option value=0 <?php progress($id, $userEmail, 0, $db); ?> >Signed up</option>
+                                <option value=1 <?php progress($id, $userEmail, 1, $db); ?> >Studying</option>
+                                <option value=2 <?php progress($id, $userEmail, 2, $db); ?> >Take Exam</option>
+                                <option value=3 <?php progress($id, $userEmail, 3, $db); ?> >Passed Exam</option>
+                           </select>
+                            </form>					
+						    <a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+							<a href="deleteAdd.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
+						</div>
+	
+						<?php
+					 }
+				} else{
+					echo "No favorites yet.";
+				}
+                ?>
+  
         </details>
 
         <details>
