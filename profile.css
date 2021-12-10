@@ -29,9 +29,7 @@ body{
 
 
 }
-.email{
-  margin-bottom: 1rem;
-}
+
 select{
   margin: 0 15px;
 }
@@ -138,19 +136,19 @@ body{
 }
 
 .username {
-  margin: 5px auto;
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .email {
-    margin: 5px auto;
+    margin: 10px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 }
 
 .favorite {
