@@ -57,11 +57,11 @@ if(isset($_POST['Submit']))
                 </p>
                     <div class="form-group">
                         <label for="oldPassword">Old Password:</label>
-                        <input type="password" name="oldPassword" class="form-control" id="oldPassword" required>
+                        <input type="password" name="oldPassword" class="form-control" id="oldPassword" placeholder="Enter your current Password" required>
                         <label for="newPassword">New Password:</label>
-                        <input type="password" name="newPassword" class="form-control" id="newPassword" required>
+                        <input type="password" name="newPassword" class="form-control" id="newPassword" placeholder="Enter your new Password" required>
                         <label for="confirmPassword">Confirm Password:</label>
-                        <input type="password" name="confirmPassword"class="form-control" id="confirmPassword" required>
+                        <input type="password" name="confirmPassword"class="form-control" id="confirmPassword" placeholder="Retype your new Password" required>
                         <br>
                         <input type="submit" name="Submit" class="btn btn-primary" value="Change Password" />
                         <br>

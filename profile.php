@@ -300,7 +300,7 @@ if ($result->num_rows > 0) {
                         }
                     ?>
                 </p>
-                    <button type="submit">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
        
             </form>
             <br>
