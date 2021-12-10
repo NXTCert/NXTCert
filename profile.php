@@ -94,16 +94,17 @@ if ($result->num_rows > 0) {
         $userId = $_SESSION['UserData']['UserId'];
 	    function isFav(&$certId, $db) {
 		
-		// echo $userId;
+		$userId = $_SESSION['UserData']['UserId'];
 		// echo $cert;
 		$query = "SELECT * FROM favorites WHERE userID = '".$userId."' AND  certId = ".$certId."";
-	
+		
 		$favcerts= $db->query($query);
 
-		if ($favcerts->num_rows > 0){   
-		echo "fas fa-heart heartIcon";
+		if ($favcerts->num_rows > 0){  
+			echo '<i class="fas fa-heart heartIcon"></i>'; 
+		
 		}else{
-		echo "far fa-heart heartIcon";
+			echo '<i class="far fa-heart heartIcon"></i>'; 
 		}
 	}
 
@@ -182,7 +183,7 @@ if ($result->num_rows > 0) {
 						<p class="description">Description: <?php echo $description; ?> </p>
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
-							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
+							<a href="favorite.php?id=<?php echo $id; ?>"><?php isFav($id, $db); ?></a>
 							<a href="add.php?id=<?php echo $id; ?>" class="plusIcon"><?php isMyCert($id, $db); ?></a>
 	
 						</div>
