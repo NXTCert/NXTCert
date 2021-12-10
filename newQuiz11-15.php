@@ -94,7 +94,7 @@ You can also add and keep track of your certifications by browsing our full list
 <br>
 	<!--question 2 --> 
 	
-	<p class="titleQuestion"><strong>Question 2</strong>: What type of certifications are you interested in?(Select all that apply)</p>
+	<p class="titleQuestion"><strong>Question 2</strong>: What type of certifications are you interested in? (Select all that apply)</p>
 
       <label>
         <input type="checkbox" name="certificationType[]" value=1>AI Engineering
@@ -189,7 +189,7 @@ You can also add and keep track of your certifications by browsing our full list
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value=10>Database Andministator
+        <input type="checkbox" name="careers[]" value=10>Database Administator
         <span class="selectCheck"></span>
 		  
       </label>
