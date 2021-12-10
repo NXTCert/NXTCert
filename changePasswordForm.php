@@ -1,15 +1,15 @@
 <?php
     session_start();
-    require_once 'db_config.php';
+    require_once 'db_config.php'; 
 
-    //redirect to login if not logged in
-    if(!isset($_SESSION['UserData']['UserId'])){
-        header('location:loginForm.php');
-        exit();
-    }
+if(!isset($_SESSION['UserData']['UserId'])){
+    header("location:loginForm.php");
+    exit;
+}
+$userEmail = $_SESSION['UserData']['UserId'];
 
-    $sql = "SELECT * FROM users WHERE UserId = '".$_SESSION['UserData']['UserId']."'";
-    $result = $db->query($sql);
+$sql = "SELECT * FROM users WHERE UserID = '".$userEmail."'";
+$result = $db->query($sql);
 
 ?>
 <!DOCTYPE html>
@@ -31,21 +31,21 @@
             <form method="POST" action="changePassword.php">
                 <div class="form-group">
                     <label for="old">Old Password:</label>
-                    <input type="password" name="old" id="old" class="form-control" value="<?php echo (isset($_SESSION['old'])) ? $_SESSION['old'] : ''; ?>">
+                    <input type="password" name="old" id="old" class="form-control" value="<?php echo (isset($_POST['old'])) ? $_POST['old'] : ''; ?>">
                 </div>
                 <div class="form-group">
                     <label for="new">New Password:</label>
-                    <input type="password" name="new" id="new" class="form-control" value="<?php echo (isset($_SESSION['new'])) ? $_SESSION['new'] : ''; ?>">
+                    <input type="password" name="new" id="new" class="form-control" value="<?php echo (isset($_POST['new'])) ? $_POST['new'] : ''; ?>">
                 </div>
                 <div class="form-group">
                     <label for="retype">Retype New Password:</label>
-                    <input type="password" name="retype" id="retype" class="form-control" value="<?php echo (isset($_SESSION['retype'])) ? $_SESSION['retype'] : ''; ?>">
+                    <input type="password" name="retype" id="retype" class="form-control" value="<?php echo (isset($_POST['retype'])) ? $_POST['retype'] : ''; ?>">
                 </div>
                 <button type="submit" name="update" class="btn btn-success"><span class="glyphicon glyphicon-check"></span>Update</button>
             </form>
             <?php
-                $error = $_SESSION['error']
-                $success = $_SESSION['success']
+                $error = $_SESSION['error'];
+                $success = $_SESSION['success'];
                 if(isset($error)){
                     ?>
                     <div class="alert alert-danger text-center" style="margin-top:20px;">

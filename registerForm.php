@@ -92,10 +92,9 @@ session_start();
                         
                     </div>
                         <p class="errorMsg" id="error3"> </p>
-                        <div class="g-recaptcha" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ"></div>
+                        <div class="g-recaptcha" data-sitekey="6LfcIY0dAAAAAJV7uHFZh9EIWSFxStkc9xPEn0c0"></div>
+                    <br>
                         <input type="submit"  id="register" name="register" class="btn btn-primary" value=Register>
-<!--                        <div class="g-recaptcha" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-badge="inline" data-size="invisible" data-callback="setResponse"></div>-->
-<!--                        <button type="submit"  id="register" name="register" class="g-recaptcha btn btn-primary" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-callback="setResponse">Register</button>-->
                         
 
 

@@ -47,14 +47,8 @@ if(isset($_POST['submit'])){
 }
 
 
-if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-    // Get verify response data
-    $secretKey  = "6LfcIY0dAAAAAF5jqJYQ8Qc6MaEtNLUCCqlsScjp";
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
-    echo $verifyResponse;
-    $responseData = json_decode($verifyResponse);
-    if($responseData->success){
-        if(isset($_POST['register'])){
+if(isset($_POST['register'])){
+
         $UserId = isset($_POST['email']) ? $_POST['email'] : '';
         $Username = isset($_POST['username']) ? $_POST['username'] : '';
         $Password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -67,25 +61,74 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
             echo $UserId;
             $_SESSION['Error'] = "This email is already in use";
             header("Location: registerForm.php");
-
             exit;
-
-        } else {
-            $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
-            $result = $db->query($addUser);
-            echo "logging in";
-            header("location:profile.php");
-            $_SESSION['UserData']['UserId']=$UserId;
-            exit;
+        }
+        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+            // Get verify response data
+            $secretKey  = "6LfcIY0dAAAAAF5jqJYQ8Qc6MaEtNLUCCqlsScjp";
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+            $responseData = json_decode($verifyResponse);
+            if($responseData->success){
+                    $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
+                    $result = $db->query($addUser);
+                    echo 'logging in';
+                    sleep(.5);
+                    header("Location: profile.php");
+                    $_SESSION['UserData']['UserId']=$UserId;
+                    exit;
+            }
+            else{
+                $_SESSION['Error'] = 'CAPTCHA Failed';
+                header("Location: registerForm.php");
+                exit;
             }
         }
-    }
-    else {
-        echo 'captcha failed';
 
-    }
+        else {
+            $_SESSION['Error'] = 'CAPTCHA Failed';
+            header("Location: registerForm.php");
+            exit;
+        }
+
 
 }
+//if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+//    // Get verify response data
+//    $secretKey  = "6LfcIY0dAAAAAF5jqJYQ8Qc6MaEtNLUCCqlsScjp";
+//    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+//    $responseData = json_decode($verifyResponse);
+//    if($responseData->success){
+//        if(isset($_POST['register'])){
+//        $UserId = isset($_POST['email']) ? $_POST['email'] : '';
+//        $Username = isset($_POST['username']) ? $_POST['username'] : '';
+//        $Password = isset($_POST['password']) ? $_POST['password'] : '';
+//
+//        $sql = "SELECT UserId FROM users WHERE UserID = '".$UserId."'";
+//        $result = $db->query($sql);
+//
+//
+//        if ($result->num_rows > 0){
+//            echo $UserId;
+//            $_SESSION['Error'] = "This email is already in use";
+//            header("Location: registerForm.php");
+//
+//            exit;
+//
+//        } else {
+//            $addUser = "INSERT INTO users (UserID, username, UserPassword) VALUES ('".$UserId."','".$Username."','".md5($Password)."');";
+//            $result = $db->query($addUser);
+//            echo "logging in";
+//            header("Location: profile.php");
+//            $_SESSION['UserData']['UserId']=$UserId;
+//            exit;
+//            }
+//        }
+//    }
+//    else {
+//        echo 'captcha failed';
+//    }
+//
+//}
  
 
 ?>

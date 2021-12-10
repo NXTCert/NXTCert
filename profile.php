@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
 
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
  <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -302,7 +302,11 @@ if ($result->num_rows > 0) {
                 </p>
                     <button type="submit">Save</button>
        
-                </form>
+            </form>
+            <br>
+            <form action="changepasswords.php" method="post">
+                <input type="submit" id="changePW" name="changePW" class="btn btn-primary" value="Change Password">
+            </form>
         </details>
      </div>
 
