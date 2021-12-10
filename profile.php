@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   
+	<script src="https://use.fontawesome.com/e1ac01e7ff.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
      <link rel="stylesheet" href="profile.css">
@@ -115,15 +115,21 @@ if ($result->num_rows > 0) {
 		$mycerts= $db->query($query);
 
 		if ($mycerts->num_rows > 0){   
-		echo "fas fa-check plusIcon";
+		echo '<i class="fas fa-check"></i>';
 		}else{
-		echo "fas fa-plus plusIcon";
+		echo '<i class="fas fa-plus"></i>';
+
 		}
 	}
 
 
 		
 	?>
+
+	<i class="fas fa-check"></i>
+	<i class="fas fa-check"></i>
+	<i class="fas fa-plus plusIcon"></i>
+	<i class="fas fa-plus"></i>
 	<?php
 	
 	$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userId."'";
@@ -181,7 +187,7 @@ if ($result->num_rows > 0) {
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" class="plusIcon"><?php isMyCert($id, $db); ?></a>
 	
 						</div>
 	
@@ -227,7 +233,7 @@ if ($result->num_rows > 0) {
 						<p class="description">Description: <?php echo $description; ?> </p>						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="delete.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>"  class="plusIcon"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" class="plusIcon"><?php isMyCert($id, $db); ?></a>
 	
 						</div>
 	
