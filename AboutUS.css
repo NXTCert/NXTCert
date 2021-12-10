@@ -7,7 +7,9 @@
   -ms-animation: fadeInLogo ease 12s;
 
 }
-
+.linkedinButton {
+  width: 100%;
+}
 
 .floatContainer {
    padding-bottom: 250px;

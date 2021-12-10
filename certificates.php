@@ -187,7 +187,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -238,7 +238,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" ><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -284,7 +284,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" ><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -324,7 +324,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" ><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -368,7 +368,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" ><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -408,7 +408,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" ><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -451,7 +451,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -490,7 +490,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -528,7 +528,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -566,7 +566,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -604,7 +604,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -642,7 +642,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -680,7 +680,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -718,7 +718,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 
@@ -756,7 +756,7 @@ $userId = $_SESSION['UserData']['UserId'];
 						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank"><i class="<?php isMyCert($id, $db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>"><i class="<?php isMyCert($id, $db); ?>"></i></a>
 	
 						</div>
 

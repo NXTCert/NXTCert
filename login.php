@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
 
     /* Check and assign submitted Username and Password to new variable */
     $UserId = isset($_POST['email']) ? $_POST['email'] : '';
+    $UserId= filter_var($UserId, FILTER_SANITIZE_STRING);
     $Password = isset($_POST['password']) ? $_POST['password'] : '';
     $sql = "SELECT UserId, UserPassword FROM users WHERE UserID = '".$UserId."' AND  UserPassword = '".md5($Password)."'";
     $result = $db->query($sql);
@@ -50,8 +51,11 @@ if(isset($_POST['submit'])){
 
 if(isset($_POST['register'])){
     $UserId = isset($_POST['email']) ? $_POST['email'] : '';
+    $UserId = filter_var($UserId, FILTER_SANITIZE_EMAIL);
     $Username = isset($_POST['username']) ? $_POST['username'] : '';
+    $Username = filter_var($Username, FILTER_SANITIZE_STRING);
     $Password = isset($_POST['password']) ? $_POST['password'] : '';
+    
 
     $sql = "SELECT UserId FROM users WHERE UserID = '".$UserId."'";
     $result = $db->query($sql);
