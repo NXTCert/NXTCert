@@ -138,19 +138,19 @@ body{
 }
 
 .username {
-    margin: auto;
+  margin: 5px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-    padding-top: 100px;
-    margin-bottom: 30px;
+  padding-top: 75px;
 }
 
 .email {
-    margin: auto;
+    margin: 5px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 75px;
 }
 
 .favorite {
