@@ -27,9 +27,11 @@ body{
   align-items: center;
   flex: 1;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
+
+}
+
+select{
+  margin: 0 15px;
 }
 
 .stepper-item::before {
@@ -134,19 +136,19 @@ body{
 }
 
 .username {
-    margin: auto;
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-    padding-top: 100px;
-    margin-bottom: 30px;
+  padding-top: 60px;
 }
 
 .email {
-    margin: auto;
+    margin: 10px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 .favorite {
@@ -180,4 +182,20 @@ body{
 
 .logoImg{
     width: 200px;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+      font-family: Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 120%;
+      height: 100%;
+      width: 100%;
+      
+  }
+
+ 
+
+
+
 }

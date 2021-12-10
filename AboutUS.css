@@ -7,7 +7,9 @@
   -ms-animation: fadeInLogo ease 12s;
 
 }
-
+.linkedinButton {
+  width: 100%;
+}
 
 .floatContainer {
    padding-bottom: 250px;
@@ -121,7 +123,7 @@ button {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  /* width: 100%; */
   font-size: 18px;
 }
 

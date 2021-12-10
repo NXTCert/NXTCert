@@ -23,8 +23,9 @@ if(!isset($_SESSION['UserData']['UserId'])){
         echo "inserted favorite";
     }
     
-
-    header('location:certificates.php');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+    // header('location:certificates.php');
 }
 
 ?>

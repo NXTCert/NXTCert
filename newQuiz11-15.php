@@ -20,7 +20,7 @@ $userId = $_SESSION['UserData']['UserId'];
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!--css file link-->
 <link rel="stylesheet" type="text/css" href="index.css">
@@ -29,9 +29,11 @@ $userId = $_SESSION['UserData']['UserId'];
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+	
 
 </head>
 <body>
+	
     <div id="nav-placeholder">
 
     </div>
@@ -41,8 +43,17 @@ $userId = $_SESSION['UserData']['UserId'];
 	<div class="whyQuizDiv"> 
 	
 	<p>The purpose of the quiz is to match you with certifications. You will be asked questions about your experience, desired careers, and desired roles. After you submit the quiz our algorithm will match you with certifications that fit your preferences. You can view your custom certifications list in your profile after you complete your quiz. <br>
+
 You can also add and keep track of your certifications by browsing our full list of certifications on the certifications page. 
+		</p>
+
 	</div>
+	
+	
+	
+	
+	
+	
 	 <div class="button-box">
 			
 			
@@ -87,74 +98,74 @@ You can also add and keep track of your certifications by browsing our full list
 
       <label>
         <input type="checkbox" name="certificationType[]" value=1>AI Engineering
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="certificationType[]" value=2>Business
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="certificationType[]" value=3>Cloud
-        <span class="select"></span>
+        <span class="selectCheck"></span>
       </label>
       <label>
         <input type="checkbox" name="certificationType[]" value=4>Cyber Security
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	 <label>
         <input type="checkbox" name="certificationType[]" value=6>Data Administation
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="certificationType[]" value=7>Date Engineering
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
         <input type="checkbox" name="certificationType[]" value=8>Data Science
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="certificationType[]" value=9>Data Solutions
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="certificationType[]" value=10>Database
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
         <input type="checkbox" name="certificationType[]" value=11>Development
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="certificationType[]" value=12>DevOps
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
       <label>
         <input type="checkbox" name="certificationType[]" value=13>Networking
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
       <label>
         <input type="checkbox" name="certificationType[]" value=14>Programming
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
         <input type="checkbox" name="certificationType[]" value=15>Project Management
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
         <input type="checkbox" name="certificationType[]" value=16>Tech Support
-        <span class="select"></span>
+        <span class="selectCheck"></span>
 		  
       </label>
 	
@@ -166,45 +177,45 @@ You can also add and keep track of your certifications by browsing our full list
 <p class="titleQuestion"><strong>Question 3</strong>: Which of these specific careers are you most interested in? (Select all that apply)</p>
 
       <label>
-        <input type="checkbox" name="careers[]" value="Computer Network Architecture">Computer Network Architecture
+        <input type="checkbox" name="careers[]" value=13>Computer Network Architecture
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Computer Systems Analyst">Computer Systems Analyst
+        <input type="checkbox" name="careers[]" value=13>Computer Systems Analyst
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Data Scientist">Data Scientist
+        <input type="checkbox" name="careers[]" value=8>Data Scientist
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Database Andministator">Database Andministator
+        <input type="checkbox" name="careers[]" value=10>Database Andministator
         <span class="selectCheck"></span>
 		  
       </label>
 	 <label>
-        <input type="checkbox" name="careers[]" value="Information Security Analyst">Information Security Analyst  
+        <input type="checkbox" name="careers[]" value=4>Information Security Analyst  
         <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="IT Manager">IT Manager
+        <input type="checkbox" name="careers[]" value=16>IT Manager
         <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="careers[]" value="Project Management">Product Manager
-        <span class="select"></span>
+        <input type="checkbox" name="careers[]" value=15>Product Manager
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Development">Software Engineer
-        <span class="select"></span>
+        <input type="checkbox" name="careers[]" value=11>Software Engineer
+        <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Tech Support">Tech Support / Support Specalist
-        <span class="select"></span>
+        <input type="checkbox" name="careers[]" value=16>Tech Support / Support Specalist
+        <span class="selectCheck"></span>
 		  
       </label> 
 	<br>
@@ -272,7 +283,7 @@ function myFunction() {
   }
 }
         $(function(){
-          $("#nav-placeholder").load("./navbar.html");
+          $("#nav-placeholder").load("navbar.php");
         });
 		
 

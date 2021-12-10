@@ -24,7 +24,8 @@ if(!isset($_SESSION['UserData']['UserId'])){
        
     }
 
-    header('location:certificates.php');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
 }
 
 ?>

@@ -1,20 +1,20 @@
 #certTitle{
     font-family: Helvetica, sans-serif;
     font-weight: 600;
-    min-width: 500px;
+    /* min-width: 500px; */
     margin: 30px 100px 15px;
 }
 #categoryTitle{
     font-family: Helvetica, sans-serif;
     font-weight: 600;
-    min-width: 500px;
+    /* min-width: 500px; */
     margin: 30px 100px 15px;
 
 }
 #searchTitle{
     font-family: Helvetica, sans-serif;
     font-weight: 900;
-    min-width: 500px;
+    /* min-width: 500px; */
 	padding-right: 120px; 
 	text-align: center;
 	font-size: 20px;
@@ -22,20 +22,31 @@
 
 }
 
+#certTitle, #categoryTitle {
+    font-weight: 600;
+    /* min-width: 500px; */
+    margin: 0 auto;
+    width: 800px;
+}
+
 
 #quizButton{
+    display: block;
     color:white;
     border: 1px solid#31B7F4;
     padding: 10px 20px;
     border-radius: 20px;
+    
+    margin: 0px auto;
+    margin-top: 15px;
     cursor: pointer;
-    margin: 5px auto;
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     font-size: .75em;
     background-color: #31B7F4;
-    left: 50%;
-    position: relative;
+   
+    /* left: 50%; */
+    /* position: absolute; */
 
 }
 #quizButton > a{
@@ -49,8 +60,7 @@
 }
 .certs{
     position: relative;
-    
-    width: 800px;
+    width: 80%;
     height: auto;
     background-color: white;
     border: solid 1px darkgray;
@@ -61,7 +71,7 @@
     padding: 10px;
 	font-family: Helvetica, sans-serif;
     font-weight: 300;
-    min-width: 500px;
+    /* min-width: 400px; */
     margin: 15px auto;
 	
 }
@@ -71,6 +81,7 @@
 }
 .title{
     font-weight: 600;
+    width: 75%;
 }
 p {
     text-align: left;
@@ -128,6 +139,12 @@ margin-left: auto;
 
 
 }
+
+.buttonContainer{
+    width: 100%;
+}
+
+
 td, th {
   border: 1px solid transparent;
 /*  text-align: left; */
@@ -151,6 +168,8 @@ font-size: 20px;
 	height: auto;
 	margin-top: 20px;
 	border-radius: 15px;
+	margin-top: 20px;
+		margin-bottom: 40px;
 
 	box-shadow: 4px 8px 8px 5px rgba(0, 0, 0, 0.2);
 
@@ -192,4 +211,19 @@ color: #31B7F4;
 	padding: 21px;
 
 
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 120%;
+    }
+    .certs{
+        width: 95%;
+
+}
+.title{
+    width: 50%;
+}
 }

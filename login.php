@@ -46,7 +46,9 @@ if(isset($_POST['submit'])){
     }
 }
 
+
 if(isset($_POST['register'])){
+
         $UserId = isset($_POST['email']) ? $_POST['email'] : '';
         $Username = isset($_POST['username']) ? $_POST['username'] : '';
         $Password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -81,11 +83,13 @@ if(isset($_POST['register'])){
                 exit;
             }
         }
+
         else {
             $_SESSION['Error'] = 'CAPTCHA Failed';
             header("Location: registerForm.php");
             exit;
         }
+
 
 }
 //if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){

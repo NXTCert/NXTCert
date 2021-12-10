@@ -8,24 +8,30 @@
     display: none;
 }
 
+
 .whyQuizDiv{
-	padding-top: 8%;
+
+	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	width: 60%;
+	padding-top: 45px;
 }
+
 
 p{
 	text-align: center;
 	font-family: Helvetica, sans-serif;
     font-weight: 300;
-    min-width: 500px;
+/*    min-width: 500px; */
 }
 
 .whyTitle{
 	font-size: 70px;
 
-
 }
+
+
 .container {
     display: block;
     max-width: 60%;
@@ -43,6 +49,7 @@ p{
 	position: relative;
 	padding: 25px 15px 25px 30px;
 	font-size: 20px;
+	
 }
 .button-box{
 	width: auto;
