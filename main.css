@@ -251,3 +251,16 @@ padding-top: 10px;
 .errorMsg {
     color: red;
 }
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 120%;
+    }
+.formsContainer{
+    width: 60%;
+    height: 60%;
+}
+
+  }

@@ -41,19 +41,24 @@ if ($result->num_rows > 0) {
 
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
  <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
 
-<!--    <link rel="stylesheet" href="main.css">-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://use.fontawesome.com/e1ac01e7ff.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
      <link rel="stylesheet" href="profile.css">
-     <link rel="stylesheet" href="certificates.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	 <link rel="stylesheet" href="certificates.css">
+   
 
     <style>
          #profileTab{
@@ -81,6 +86,124 @@ if ($result->num_rows > 0) {
             <p class="email"><?php echo $userEmail; ?></p>
         </div>
          
+       
+
+        <details>
+            <summary>Recommended Certifications</summary>
+        <?php 
+        $userId = $_SESSION['UserData']['UserId'];
+	    function isFav(&$certId, $db) {
+		
+		// echo $userId;
+		// echo $cert;
+		$query = "SELECT * FROM favorites WHERE userID = '".$userId."' AND  certId = ".$certId."";
+	
+		$favcerts= $db->query($query);
+
+		if ($favcerts->num_rows > 0){   
+		echo "fas fa-heart heartIcon";
+		}else{
+		echo "far fa-heart heartIcon";
+		}
+	}
+
+	function isMyCert(&$certId, $db) {
+		$userId = $_SESSION['UserData']['UserId'];
+		// echo $userId;
+		// echo $cert;
+		$query = "SELECT * FROM certsInProgress WHERE userID = '".$userId."' AND  certId = ".$certId."";
+		$mycerts= $db->query($query);
+
+		if ($mycerts->num_rows > 0){   
+		echo '<i class="fas fa-check"></i>';
+		}else{
+		echo '<i class="fas fa-plus"></i>';
+
+		}
+	}
+
+
+		
+	?>
+
+	<?php
+	
+	$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userId."'";
+	$result = $db->query($sql);
+
+	if ($result->num_rows > 0) {
+
+
+				$budgetQuery = "SELECT budgetId from userBudgets where userid = '".$userId."'";
+				$budget = $db->query($budgetQuery);
+				while($row = $budget->fetch_assoc()) {
+					$userBudget = $row["budgetId"];             
+				 }
+
+
+
+				$sql = "SELECT experienceId from userExperience where userid = '".$userId."'";
+				$experience = $db->query($sql);
+				while($row = $experience->fetch_assoc()) {
+					$userExperience = $row["experienceId"]; 
+					           
+				 }
+
+
+				$userIndustryArray = array();
+				$sql = "SELECT industryid FROM userIndustries WHERE UserID = '".$userId."'";
+				$industries = $db->query($sql);
+				while($row = $industries->fetch_assoc()) {
+					$userind = $row["industryid"]; 
+					array_push($userIndustryArray,$userind);           
+				 }
+				// print_r($userIndustryArray);
+				$implodedArrary = implode($userIndustryArray, ',');
+
+
+				$sql = "SELECT * FROM certs WHERE experienceid = '".$userExperience."' AND budgetid <= '".$userBudget."' AND industryid in (".$implodedArrary.")";
+				$certs = $db->query($sql);
+				$rowcount = mysqli_num_rows($certs);
+				// printf("Result set has %d rows.\n",$rowcount);
+				
+				if ($rowcount > 0){
+					while($row = $certs->fetch_assoc()) {
+						$title = $row["title"];
+						$description = $row["description"];
+						$cost = $row["cost"];
+						$url = $row["url"];
+						$id = $row["certId"];
+			 
+						?>
+	
+						<div class="certs" id="rec<?php echo $id; ?>">
+						<p class="title"><?php echo $title; ?></p>
+						<p class="source">Cost: $<?php echo $cost; ?>  <br>
+						<p class="description">Description: <?php echo $description; ?> </p>
+						
+						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
+							<a href="favorite.php?id=<?php echo $id; ?>"><i class="<?php isFav($id,$db); ?>"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" class="plusIcon"><?php isMyCert($id, $db); ?></a>
+	
+						</div>
+	
+						<?php
+					 }
+				} else{
+					echo "No certifications matching your criteria at this time.";
+				}
+
+				
+
+
+			} else {
+             
+	?>
+		<button id="quizButton"> <a href='newQuiz11-15.php'>Take the Quiz</a></button>
+	<?php 
+		}
+	?>
+        </details>
         <details class="favorite">
             <summary>Favorites</summary>
         
@@ -106,7 +229,7 @@ if ($result->num_rows > 0) {
 						<p class="description">Description: <?php echo $description; ?> </p>						
 						<a href="<?php echo $url; ?>" target="_blank"><i class="fas fa-external-link-alt shareIcon"></i></a>
 							<a href="delete.php?id=<?php echo $id; ?>"><i class="far fas fa-times heartIcon"></i></a>
-							<a href="add.php?id=<?php echo $id; ?>" target="_blank" class="plusIcon"><i class="fas fa-plus"></i></a>
+							<a href="add.php?id=<?php echo $id; ?>" class="plusIcon"><?php isMyCert($id, $db); ?></a>
 	
 						</div>
 	
@@ -159,11 +282,6 @@ if ($result->num_rows > 0) {
         </details>
 
         <details>
-            <summary>Community</summary>
-            <p>Coming soon...</p>
-        </details>
-
-        <details>
             <summary>Edit Profile</summary>
             <form action="editProfile.php" method="post">
                     <label for="username"><b>Name</b></label>
@@ -184,7 +302,11 @@ if ($result->num_rows > 0) {
                 </p>
                     <button type="submit">Save</button>
        
-                </form>
+            </form>
+            <br>
+            <form action="changepasswords.php" method="post">
+                <input type="submit" id="changePW" name="changePW" class="btn btn-primary" value="Change Password">
+            </form>
         </details>
      </div>
 

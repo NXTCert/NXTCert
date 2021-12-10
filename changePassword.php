@@ -4,17 +4,12 @@
 
     if(isset($_POST['update'])){
         //get POST data
-        $old = $_POST['old'];
-        $new = $_POST['new'];
-        $retype = $_POST['retype'];
+        $old = md5($_POST['old']);
+        $new = md5($_POST['new']);
+        $retype = md5($_POST['retype']);
         
         $user = $_SESSION['UserData']['UserId'];
         $error = $_SESSION['error'];
-        
-        //create a session for the data incase error occurs
-        $_SESSION['old'] = $old;
-        $_SESSION['new'] = $new;
-        $_SESSION['retype'] = $retype;
 
         //get user details
         $sql = "SELECT * FROM users WHERE userId = '".$user."'";
@@ -26,16 +21,12 @@
             //check if new password match retype
             if($new == $retype){
                 //hash our password
-                $password = password_hash($new, PASSWORD_DEFAULT);
+                $password = md5($new);
 
                 //update the new password
-                $sql = "UPDATE users SET password = '$password' WHERE id = '".$user."'";
-                if($db->result($sql)){
+                $sql = "UPDATE users SET UserPassword = '".$password."' WHERE userId = '".$user."'";
+                if($db->query($sql)){
                     $_SESSION['success'] = "Password updated successfully";
-                    //unset our session since no error occured
-                    unset($_SESSION['old']);
-                    unset($_SESSION['new']);
-                    unset($_SESSION['retype']);
                 }
                 else{
                     $error = $db->error;
