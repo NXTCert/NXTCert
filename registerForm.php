@@ -60,7 +60,7 @@ session_start();
                 </form>
             </div> -->
             <div id="registerFormContainer">
-                <form id='demo-form' action="login.php" method="post">
+                <form action="login.php" method="post">
 
                 <p class="errorMsg" id="error1">
                     <?PHP
@@ -92,7 +92,11 @@ session_start();
                         
                     </div>
                         <p class="errorMsg" id="error3"> </p>
-                        <button type="submit"  id= "register" name="register" class="g-recaptcha btn btn-primary" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-callback='onSubmit'>Register</button>
+                        <div class="g-recaptcha" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ"></div>
+                        <input type="submit"  id="register" name="register" class="btn btn-primary" value=Register>
+<!--                        <div class="g-recaptcha" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-badge="inline" data-size="invisible" data-callback="setResponse"></div>-->
+<!--                        <button type="submit"  id="register" name="register" class="g-recaptcha btn btn-primary" data-sitekey="6LcUcYgdAAAAAGWHU5ugrsqyvpaFKpcTyyUeo-rQ" data-callback="setResponse">Register</button>-->
+                        
 
 
                 </form>
@@ -175,6 +179,17 @@ session_start();
                 error.innerHTML = "";
             }
             }
+//            var onloadCallback = function() {
+//                grecaptcha.execute();
+//            };
+//
+//            function setResponse(response) { 
+//                document.getElementById('captcha-response').value = response; 
+//            }
+//            function onSubmit(token) {
+//                document.getElementById("registerForm").submit();
+//            }
+
 
 
         </script>
