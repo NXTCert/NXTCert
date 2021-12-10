@@ -126,10 +126,6 @@ if ($result->num_rows > 0) {
 		
 	?>
 
-	<i class="fas fa-check"></i>
-	<i class="fas fa-check"></i>
-	<i class="fas fa-plus plusIcon"></i>
-	<i class="fas fa-plus"></i>
 	<?php
 	
 	$sql = "SELECT * FROM userIndustries WHERE UserID = '".$userId."'";
