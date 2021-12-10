@@ -265,7 +265,7 @@ if ($result->num_rows > 0) {
                             <select name="progress" onchange="this.form.submit()">
                                 <option value=0 <?php progress($id, $userEmail, 0, $db); ?> >Signed up</option>
                                 <option value=1 <?php progress($id, $userEmail, 1, $db); ?> >Studying</option>
-                                <option value=2 <?php progress($id, $userEmail, 2, $db); ?> >Take Exam</option>
+                                <option value=2 <?php progress($id, $userEmail, 2, $db); ?> >Scheduling Exam</option>
                                 <option value=3 <?php progress($id, $userEmail, 3, $db); ?> >Passed Exam</option>
                            </select>
                             </form>					
