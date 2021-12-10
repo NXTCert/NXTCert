@@ -82,6 +82,7 @@ $userId = $_SESSION['UserData']['UserId'];
 
 		if(!isset($_SESSION['UserData']['UserId'])){
 	?>
+		<div class="buttonContainer">
 		<button id="quizButton"> <a href='loginForm.php'>Login to take the quiz</a></button>
 	<?php
 		}
@@ -109,7 +110,7 @@ $userId = $_SESSION['UserData']['UserId'];
 		}}
 	?>
 
-
+</div>
 
     
    

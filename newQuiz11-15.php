@@ -177,44 +177,44 @@ You can also add and keep track of your certifications by browsing our full list
 <p class="titleQuestion"><strong>Question 3</strong>: Which of these specific careers are you most interested in? (Select all that apply)</p>
 
       <label>
-        <input type="checkbox" name="careers[]" value="Computer Network Architecture">Computer Network Architecture
+        <input type="checkbox" name="careers[]" value=13>Computer Network Architecture
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Computer Systems Analyst">Computer Systems Analyst
+        <input type="checkbox" name="careers[]" value=13>Computer Systems Analyst
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Data Scientist">Data Scientist
+        <input type="checkbox" name="careers[]" value=8>Data Scientist
         <span class="selectCheck"></span>
       </label>
       <label>
-        <input type="checkbox" name="careers[]" value="Database Andministator">Database Andministator
+        <input type="checkbox" name="careers[]" value=10>Database Andministator
         <span class="selectCheck"></span>
 		  
       </label>
 	 <label>
-        <input type="checkbox" name="careers[]" value="Information Security Analyst">Information Security Analyst  
+        <input type="checkbox" name="careers[]" value=4>Information Security Analyst  
         <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="IT Manager">IT Manager
+        <input type="checkbox" name="careers[]" value=16>IT Manager
         <span class="selectCheck"></span>
 		  
       </label> 
 	<label>
-        <input type="checkbox" name="careers[]" value="Project Management">Product Manager
+        <input type="checkbox" name="careers[]" value=15>Product Manager
         <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Development">Software Engineer
+        <input type="checkbox" name="careers[]" value=11>Software Engineer
         <span class="selectCheck"></span>
 		  
       </label>
 	<label>
-        <input type="checkbox" name="careers[]" value="Tech Support">Tech Support / Support Specalist
+        <input type="checkbox" name="careers[]" value=16>Tech Support / Support Specalist
         <span class="selectCheck"></span>
 		  
       </label> 
